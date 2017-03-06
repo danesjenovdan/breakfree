@@ -1,0 +1,610 @@
+@font-face {
+  font-family: 'GraphCondensedWeb';
+  src: url('fonts/graph/graph-condensed/graph-condensed-bold-web.eot');
+  src: url('fonts/graph/graph-condensed/graph-condensed-bold-web.eot?#iefix') format('embedded-opentype'), url('fonts/graph/graph-condensed/graph-condensed-bold-web.woff2') format('woff2'), url('fonts/graph/graph-condensed/graph-condensed-bold-web.woff') format('woff'), url('fonts/graph/graph-condensed/graph-condensed-bold-web.ttf') format('truetype'), url('fonts/graph/graph-condensed/graph-condensed-bold-web.svg#graphcondensed') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body,
+p {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.font-graph {
+  font-family: 'GraphCondensedWeb', sans-serif;
+}
+
+.text-turquoise {
+  color: #35c9c5;
+}
+
+.text-orange {
+  color: #ff931e;
+}
+
+a {
+  color: #35c9c5;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:active {
+  text-decoration: underline;
+}
+
+small {
+  font-size: 13px;
+  color: #748b91;
+}
+
+@media screen and (max-width: 480px) {
+  small {
+    font-size: 11px;
+  }
+}
+
+.landing,
+.demands,
+.petition {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.landing .landing__title {
+  display: inline-block;
+  font-size: 136px;
+  line-height: 117px;
+  padding-top: 120px;
+  padding-bottom: 140px;
+  margin: 0 !important;
+  position: relative;
+  left: 275px;
+}
+
+.landing .bullhorn {
+  width: 250px;
+  height: 198px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: inline-block;
+  background-image: url("img/breakfree-logo-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.landing .gray-box {
+  position: absolute;
+  bottom: 50px;
+  right: 140px;
+  width: 380px;
+  height: 270px;
+  background-color: #f0f5fa;
+}
+
+.landing .gray-box .bubble-arrow {
+  background-image: url("img/bubble-arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 279px;
+  height: 121px;
+  position: absolute;
+  bottom: -16px;
+  right: -30px;
+  z-index: 99;
+  font-size: 35px;
+  padding-top: 12px;
+  letter-spacing: 3px;
+}
+
+.bubble-arrow a {
+  color: #000;
+  text-decoration: none;
+}
+
+.bubble-arrow a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.modal-backdrop {
+  display: none;
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: auto;
+  text-align: center;
+  font-size: 24px;
+  z-index: 98;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -8px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  animation: bounce 2s;
+  animation-delay: 3s;
+  transform-origin: center bottom;
+}
+
+@media screen and (max-width: 991px) {
+  .landing {
+    min-height: 728px;
+  }
+
+  .landing .landing__title {
+    position: absolute;
+    left: auto;
+    right: 0;
+  }
+
+  .landing .gray-box {
+    right: 30px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .landing {
+    min-height: 450px;
+  }
+
+  .landing .landing__title {
+    font-size: 50px;
+    line-height: 45px;
+    padding-top: 40px;
+    right: 15%;
+  }
+
+  .landing .bullhorn {
+    width: 152px;
+    height: 121px;
+    bottom: 85px;
+  }
+
+  .landing .gray-box {
+    right: 0;
+    bottom: 0;
+    top: 160px;
+    height: 320px;
+    width: 174px;
+  }
+
+  .landing .gray-box .bubble-arrow {
+    width: 195px;
+    height: 85px;
+    bottom: 27px;
+    right: auto;
+    left: -37px;
+    font-size: 18px;
+    padding-top: 12px;
+    letter-spacing: 3px;
+  }
+}
+
+.demands {
+  margin-top: 50px;
+}
+
+.demands .demands__title {
+  display: inline-block;
+  font-size: 116px;
+  line-height: 103px;
+  padding-top: 190px;
+  padding-bottom: 190px;
+  padding-left: 45px;
+  margin: 0 !important;
+  position: relative;
+  z-index: 2;
+}
+
+.demands .turquoise-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /*left: -65px;*/
+  left: -9999px;
+  right: 203px;
+  /*width: 447px;*/
+  background-color: #35c9c5;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1199px) {
+  .demands .turquoise-box {
+    right: 103px;
+  }
+}
+
+.demands .demand {
+  font-size: 14px;
+  padding-left: 60px;
+  position: relative;
+  min-height: 108px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.demands .demand__number {
+  font-size: 80px;
+  line-height: 80px;
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -40px;
+}
+
+.demands .demand__text {
+  padding: 40px 30px;
+  background-color: #f0f5fa;
+}
+
+.demands .demand__hover {
+  background-color: #f0f5fa;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60px;
+  right: 0;
+  background-image: url("img/circle-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.demands .demand__hover span {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  right: 30px;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.demands .demand__text:hover + .demand__hover,
+.demands .demand__hover:hover {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .demands .demands__title {
+    padding-bottom: 0;
+  }
+
+  .demands .turquoise-box {
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .demands .demands__title {
+    font-size: 50px;
+    line-height: 51px;
+    padding-top: 45px;
+  }
+
+  .demands .turquoise-box {
+    bottom: 25px;
+  }
+
+  .demands .demand {
+    font-size: 13px;
+  }
+
+  .demands .demand__number {
+    top: 18px;
+    margin-top: 0;
+  }
+}
+
+.petition .title-container {
+  padding-top: 180px;
+  padding-bottom: 35px;
+}
+
+.petition .petition__title {
+  font-size: 56px;
+  line-height: 53px;
+  display: inline;
+  vertical-align: text-top;
+}
+
+.petition .petition__title span {
+  font-size: 76px;
+}
+
+.petition .petition__note {
+  white-space: nowrap;
+}
+
+.petition .progress-container {
+  padding-bottom: 180px;
+}
+
+.petition .progress {
+  height: 35px;
+  background-color: #dae6f2;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.petition .progress-bar {
+  background-color: #ff931e;
+}
+
+.petition .progress__note {
+  font-size: 15px;
+}
+
+.petition .petition__form,
+.petition .petition__reset {
+  padding-top: 180px;
+}
+
+.petition .form-control {
+  border: 2px solid #000;
+  border-radius: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding: 0 15px;
+  color: #35c9c5;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+}
+
+.petition .btn-default {
+  font-family: 'GraphCondensedWeb', sans-serif;
+  font-size: 56px;
+  line-height: 76px;
+  background-color: #ff931e;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .petition .title-container {
+    padding-top: 0;
+    padding-bottom: 35px;
+  }
+
+  .petition .progress-container {
+    padding-bottom: 0;
+  }
+
+  .petition .petition__form,
+  .petition .petition__reset {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .petition .petition__title {
+    font-size: 30px;
+    line-height: 32px;
+    display: block;
+  }
+
+  .petition .petition__title span {
+    font-size: 40px;
+  }
+
+  .petition .petition__note {
+    white-space: normal;
+  }
+
+  .petition .btn-default {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+.form-control:hover,
+.form-control:active,
+.form-control:focus,
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+}
+
+.checkbox {
+  padding-left: 20px;
+  margin-bottom: 23px;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label {
+  line-height: 26px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 0;
+  margin-left: -20px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 4px;
+  padding-top: 5px;
+  font-size: 16px;
+  color: #35c9c5;
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "\e013";
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.petition .petition__reset {
+  display: none;
+}
+
+.footer {
+  background-color: #35c9c5;
+  line-height: 64px;
+}
+
+.footer a {
+  color: #000;
+}
+
+.footer__social {
+  font-size: 30px;
+}
+
+.footer .social__title {
+  margin-right: 30px;
+}
+
+.btn-social {
+  background: transparent;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  padding: 2px 5px 5px 5px;
+}
+
+.btn-social svg {
+  fill: #fff;
+}
+
+.btn-social:hover svg {
+  fill: #000;
+}
+
+.footer__people {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .social__title {
+    margin-right: 0;
+    display: block;
+  }
+
+  .footer__people {
+    text-align: center;
+  }
+}
+
+.chatbox {
+  position: fixed;
+  width: 575px;
+  bottom: 0;
+  right: 115px;
+  z-index: 1050;
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .chatbox {
+    width: 95%;
+    bottom: 0;
+    right: 2%;
+    z-index: 1050;
+    display: none;
+  }
+}
+
+.chatbox .chat__title {
+  background-color: #17292e;
+  height: 70px;
+  background-image: url("img/breakfree-logo-white.png");
+  background-size: 62px 50px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.chatbox .chat__title .title {
+  color: #fff;
+  line-height: 70px;
+  font-size: 21px;
+  padding-left: 90px;
+}
+
+.chatbox .chat__title .close {
+  font-family: serif;
+  color: #fff;
+  opacity: 1;
+  font-size: 50px;
+  line-height: 70px;
+  padding: 0 20px;
+}
+
+.chatbox .frame-container {
+  background-color: #35c9c5;
+  width: 100%;
+  height: 400px;
+  max-height: 80vh;
+}
+
+.chatbox .frame-container iframe {
+  border: none !important;
+  width: 100%;
+  height: 100%;
+}
