@@ -402,6 +402,10 @@ small {
   border-radius: 0;
 }
 
+.petition .btn-default:hover {
+  color: #000;
+}
+
 @media screen and (max-width: 991px) {
   .petition .title-container {
     padding-top: 0;

@@ -48,7 +48,7 @@ $(function ready() {
 
   $('.js-more').on('click', showAllSignatures);
 
-  var maxSignatures = +$('.js-signaturemax').text().trim();
+  var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
   $.get('http://djnd-test.lepko.net/podpisek/?k=breakfree&count', function (res) {
     var count = parseInt(res, 10);
     if (!isNaN(count)) {
