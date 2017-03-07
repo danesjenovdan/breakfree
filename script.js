@@ -16,7 +16,7 @@ $(function ready() {
       $('body').addClass('modal-open');
 
       $('.chatbox').show();
-      $('.chatbox .frame-container').html('<iframe src="http://example.com/" border="0"></iframe>');
+      $('.chatbox .frame-container').html('<iframe src="http://muki.webfactional.com/djstatic/breakfree/" border="0"></iframe>');
     }, 150);
   });
 
@@ -34,9 +34,22 @@ $(function ready() {
     }, 150);
   }
 
-  var maxSignatures = +$('.js-signaturemax').text().trim();
+  $('.js-signaturenames').load('http://djnd-test.lepko.net/podpisek/?k=breakfree&list', function () {
+    var $this = $(this);
+    if (parseInt($this.css('max-height'), 10) > $this.height()) {
+      showAllSignatures();
+    }
+  });
 
-  $.get('~php/podpisek.php?k=breakfree&count', function (res) {
+  function showAllSignatures() {
+    $('.js-more').remove();
+    $('.js-signaturenames').removeClass('show-less');
+  }
+
+  $('.js-more').on('click', showAllSignatures);
+
+  var maxSignatures = +$('.js-signaturemax').text().trim();
+  $.get('http://djnd-test.lepko.net/podpisek/?k=breakfree&count', function (res) {
     var count = parseInt(res, 10);
     if (!isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
@@ -56,8 +69,7 @@ $(function ready() {
       petition_djnd: $('#petition-djnd').val(),
     };
     console.log(data);
-    $.get('~php/podpisek.php', data, function (res) {
-      console.log(res);
+    $.get('http://djnd-test.lepko.net/podpisek/', data, function (res) {
       if (res == 'success') {
         $('.js-petition-error').text('');
         $('.petition__form').hide();
@@ -81,20 +93,20 @@ $(function ready() {
   });
 
   var link = document.location.href;
-  // $.ajax({
-  //   method: 'POST',
-  //   url: 'http://www.djnd.si/yomamasofat/',
-  //   data: {
-  //     fatmama: document.location.href,
-  //   },
-  //   success: function (resp) {
-  //     link = resp;
-  //   }
-  // });
+  $.ajax({
+    method: 'POST',
+    url: 'http://www.djnd.si/yomamasofat/',
+    data: {
+      fatmama: document.location.href,
+    },
+    success: function (resp) {
+      link = resp;
+    }
+  });
 
-  var title = '{{TODO}}';
-  var text = '{{TODO}}';
-  var hashtags = '';
+  var title = 'Break Free SI';
+  var text = 'Čas je zdaj: osvobodimo se fosilnih goriv!';
+  var hashtags = '#breakfree';
   //social
   $('.js-facebook').on('click', function () {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);

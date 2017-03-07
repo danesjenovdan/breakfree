@@ -33,14 +33,15 @@ if ($result = $conn->query("SHOW TABLES LIKE '" . $table . "'")) {
             )";
 
             if ($conn->query($sql)) {
+                echo("created");
+            } else {
                 die("create error");
             }
-            echo("created");
-            exit();
         } else {
             die("key doesnt exist");
         }
         $result->close();
+        exit();
     }
 } else {
     die("exists error");
