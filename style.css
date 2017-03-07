@@ -343,7 +343,7 @@ small {
 .petition .petition__title {
   font-size: 56px;
   line-height: 53px;
-  display: inline;
+  /*display: inline;*/
   vertical-align: text-top;
 }
 
@@ -352,7 +352,7 @@ small {
 }
 
 .petition .petition__note {
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 .petition .progress-container {
