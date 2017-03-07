@@ -9,29 +9,29 @@ $(function ready() {
 
   $('.js-open-chatbox').on('click', function (event) {
     event.preventDefault();
-    $('.modal-backdrop').show();
-    setTimeout(function () {
-      $('.modal-backdrop').addClass('in');
+    // $('.modal-backdrop').show();
+    // setTimeout(function () {
+    //   $('.modal-backdrop').addClass('in');
 
-      $('body').addClass('modal-open');
+    //   $('body').addClass('modal-open');
 
       $('.chatbox').show();
       $('.chatbox .frame-container').html('<iframe src="http://muki.webfactional.com/djstatic/breakfree/" border="0"></iframe>');
-    }, 150);
+    // }, 150);
   });
 
   $('.modal-backdrop, .chatbox button.close').on('click', closeChat);
 
   function closeChat(event) {
     event.preventDefault();
-    $('body').removeClass('modal-open');
+    // $('body').removeClass('modal-open');
 
     $('.chatbox').hide();
     $('.chatbox .frame').remove();
-    $('.modal-backdrop').removeClass('in');
-    setTimeout(function () {
-      $('.modal-backdrop').hide();
-    }, 150);
+    // $('.modal-backdrop').removeClass('in');
+    // setTimeout(function () {
+    //   $('.modal-backdrop').hide();
+    // }, 150);
   }
 
   $('.js-signaturenames').load('http://djnd-test.lepko.net/podpisek/?k=breakfree&list', function () {
