@@ -524,12 +524,15 @@ small {
   display: inline-block;
 }
 
+.petition__reset a,
+.petition__reset a:hover,
 .petition__reset .btn,
 .petition__reset .btn:hover {
   font-weight: bold;
   color: #35c9c5;
   padding-left: 0;
   padding-right: 0;
+  text-decoration: underline;
 }
 
 .footer {
