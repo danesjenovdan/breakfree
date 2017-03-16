@@ -81,7 +81,7 @@ $(function ready() {
     });
   });
 
-  $('.petition__reset button').on('click', function () {
+  $('.petition__reset .btn-link').on('click', function () {
     $('#petition-name').val('');
     $('#petition-email').val('');
     $('#petition-greenpeace, #petition-djnd').each(function () {
