@@ -2,10 +2,7 @@
 
 header('Access-Control-Allow-Origin: *');
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "djnd";
+include('db.php');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -92,6 +89,10 @@ $sql = "INSERT INTO $table (name, email, subscribe_djnd, subscribe_greenpeace) V
 if($conn->query($sql)) {
     exit("success");
 } else {
+    $a = $conn->error;
+    if (strpos($a, 'Duplicate entry') !== false) {
+        die("Za to e-pošto že obstaja podpis!");
+    }
     die("insert error");
 }
 
