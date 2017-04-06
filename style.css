@@ -509,6 +509,7 @@ small {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*.petition .petition__form {*/
 .petition .petition__reset {
   display: none;
 }
