@@ -34,7 +34,7 @@ $(function ready() {
     // }, 150);
   }
 
-  $('.js-signaturenames').load('http://djnd-test.lepko.net/podpisek/?k=breakfree&list', function () {
+  $('.js-signaturenames').load('podpisi.txt', function () {
     var $this = $(this);
     if (parseInt($this.css('max-height'), 10) > $this.height()) {
       showAllSignatures();
@@ -49,15 +49,16 @@ $(function ready() {
   $('.js-more').on('click', showAllSignatures);
 
   var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
-  $.get('http://djnd-test.lepko.net/podpisek/?k=breakfree&count', function (res) {
-    var count = parseInt(res, 10);
+  // $.get('http://djnd-test.lepko.net/podpisek/?k=breakfree&count', function (res) {
+    // var count = parseInt(res, 10);
+    var count = 5255;
     if (!isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
       $('.js-signaturecount').text(count);
       $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
       $('.petition .progress-bar span').text(percent + '%');
     }
-  });
+  // });
 
   $('.petition__form').on('submit', function (event) {
     event.preventDefault();
