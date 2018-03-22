@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');
+
 @font-face {
   font-family: 'GraphCondensedWeb';
   src: url('fonts/graph/graph-condensed/graph-condensed-bold-web.eot');
@@ -8,7 +10,7 @@
 
 body,
 p {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .font-graph {
@@ -16,15 +18,19 @@ p {
 }
 
 .text-turquoise {
-  color: #35c9c5;
+  color: #000000;
+}
+
+.text-red {
+  color: #de3c00;
 }
 
 .text-orange {
-  color: #ff931e;
+  color: #ffbf39;
 }
 
 a {
-  color: #35c9c5;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -219,15 +225,17 @@ small {
 }
 
 .demands .demands__title {
+  font-family: 'Roboto Mono', monospace;
   display: inline-block;
-  font-size: 116px;
-  line-height: 103px;
-  padding-top: 190px;
-  padding-bottom: 190px;
-  padding-left: 45px;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
   margin: 0 !important;
   position: relative;
   z-index: 2;
+  color: #ffffff;
 }
 
 .demands .turquoise-box {
@@ -236,9 +244,9 @@ small {
   bottom: 0;
   /*left: -65px;*/
   left: -9999px;
-  right: 203px;
+  right: 0;
   /*width: 447px;*/
-  background-color: #35c9c5;
+  background-color: #000000;
   z-index: 1;
 }
 
@@ -336,19 +344,23 @@ small {
 }
 
 .petition .title-container {
-  padding-top: 180px;
+  padding-top: 20px;
   padding-bottom: 35px;
 }
 
 .petition .petition__title {
-  font-size: 56px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px;
   line-height: 53px;
   /*display: inline;*/
   vertical-align: text-top;
+  color: #000000;
+  font-weight: 400;
 }
 
 .petition .petition__title span {
-  font-size: 76px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .petition .petition__note {
@@ -367,7 +379,7 @@ small {
 }
 
 .petition .progress-bar {
-  background-color: #ff931e;
+  background-color: #ffbf39;
 }
 
 .petition .progress__note {
@@ -390,24 +402,34 @@ small {
   margin-bottom: 20px;
   font-size: 15px;
   padding: 0 15px;
-  color: #35c9c5;
+  color: #000000;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
 }
 
 .petition .btn-default {
-  font-family: 'GraphCondensedWeb', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 56px;
   line-height: 76px;
-  background-color: #ff931e;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border: 0;
   border-radius: 0;
+  text-transform: uppercase;
 }
 
 .petition .btn-default:hover {
-  color: #000;
+  color: #000000;
+  background-color: #ffbf39;
+}
+
+.petition .btn-yellow {
+  background-color: #ffbf39;
+  color: #ffffff;
+}
+.petition .btn-yellow:hover {
+  color: #000000;
 }
 
 @media screen and (max-width: 991px) {
@@ -496,7 +518,7 @@ small {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #35c9c5;
+  color: #000000;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -515,7 +537,7 @@ small {
 }
 
 .petition__reset .social-box {
-  background-color: #35c9c5;
+  background-color: #000000;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -530,14 +552,14 @@ small {
 .petition__reset .btn,
 .petition__reset .btn:hover {
   font-weight: bold;
-  color: #35c9c5;
+  color: #000000;
   padding-left: 0;
   padding-right: 0;
   text-decoration: underline;
 }
 
 .footer {
-  background-color: #35c9c5;
+  background-color: #000000;
   line-height: 64px;
 }
 
@@ -551,26 +573,38 @@ small {
 
 .footer .social__title {
   margin-right: 30px;
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
 }
 
 .btn-social {
-  background: transparent;
-  color: #fff;
+  background: #ffbf39;
+  color: #000000;
   width: 35px;
   height: 35px;
-  padding: 2px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 0;
 }
 
 .btn-social svg {
-  fill: #fff;
+  fill: #000000;
 }
 
 .btn-social:hover svg {
-  fill: #000;
+  fill: #ffffff;
 }
 
 .footer__people {
   font-size: 18px;
+  color: #ffffff;
+  line-height: 1.2em;
+  padding-top: 10px;
+}
+.footer__people a {
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1em;
 }
 
 @media screen and (max-width: 480px) {
@@ -633,7 +667,7 @@ small {
 }
 
 .chatbox .frame-container {
-  background-color: #35c9c5;
+  background-color: #000000;
   width: 100%;
   height: 400px;
   max-height: 85vh;
@@ -648,7 +682,7 @@ small {
 /* MUKI */
 
 .signatures {
-  background-color: #f0f5fa;
+  background-color: #e5e5e5;
   padding: 30px;
   margin-bottom: 50px;
   font-size: 16px;
@@ -663,11 +697,11 @@ small {
 .signature-names.show-less::after {
   content: ' ';
   display: table;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgb(240, 245, 250)));
-  background-image: -webkit-linear-gradient(top, transparent, rgb(240, 245, 250));
-  background-image: -moz-linear-gradient(top, transparent, rgb(240, 245, 250));
-  background-image: linear-gradient(to bottom, transparent, rgb(240, 245, 250));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#03f0f5fa', endColorstr='#f0f5fa', GradientType=0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, transparent, #e5e5e5);
+  background-image: -moz-linear-gradient(top, transparent, #e5e5e5);
+  background-image: linear-gradient(to bottom, transparent, #e5e5e5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
   width: 100%;
   height: 45px;
   position: absolute;
@@ -689,4 +723,52 @@ small {
   .signatures__title {
     font-size: 30px;
   }
+}
+
+
+
+.box {
+  width: 300px;
+  height: 300px;
+  background: #000000;
+  position: relative;
+  margin: auto;
+  color: #ffffff;
+  cursor: pointer;
+
+  margin-bottom: 30px;
+}
+.box-yellow {
+  background: #ffbf39;
+  color: #000000;
+}
+.box p {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.header-thing {
+  background: #000000;
+  position: relative;
+  width: 100%;
+
+}
+.header-thing h1 {
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.logo-circle {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+
+  top: -60px;
+  left: -15px;
 }
