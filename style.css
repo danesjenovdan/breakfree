@@ -1005,3 +1005,17 @@ small {
   padding-top: 10px;
   margin-left: 70px;
 }
+
+.petition .progress-bar-milestone {
+  width: 50% !important;
+  background-color: orange;
+  position: relative;
+  top: -35px;
+}
+
+.progress__arrow {
+  height: 30px;
+  width: 50%;
+  border-right: 2px solid #333;
+  margin: -10px 0 10px 0;
+}
