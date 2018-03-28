@@ -34,11 +34,9 @@ $(function ready() {
     // }, 150);
   }
 
-  $('.js-signaturenames').load('podpisi.txt', function () {
-    var $this = $(this);
-    if (parseInt($this.css('max-height'), 10) > $this.height()) {
-      showAllSignatures();
-    }
+  $.get('https://djapi.knedl.si/getKuraSignatures/', function(r) {
+    var all = r.names;
+    $('.js-signaturenames').text(all)
   });
 
   function showAllSignatures() {
@@ -49,37 +47,48 @@ $(function ready() {
   $('.js-more').on('click', showAllSignatures);
 
   var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
-  // $.get('http://djnd-test.lepko.net/podpisek/?k=breakfree&count', function (res) {
+  $.get('https://djapi.knedl.si/getKuraSignatures/', function(r) {
     // var count = parseInt(res, 10);
-    var count = 5255;
+    var all = r.names;
+    var count = r.counter;
     if (!isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
       $('.js-signaturecount').text(count);
+      $('.js-signaturecount-bottom').text(r.names.split(',').length);
       $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
       $('.petition .progress-bar span').text(percent + '%');
     }
-  // });
+  });
 
   $('.petition__form').on('submit', function (event) {
     event.preventDefault();
-    var data = {
-      k: 'breakfree',
-      name: $('#petition-name').val(),
-      email: $('#petition-email').val(),
-      petition_greenpeace: $('#petition-greenpeace').val(),
-      petition_djnd: $('#petition-djnd').val(),
-    };
-    console.log(data);
-    $.get('http://djnd-test.lepko.net/podpisek/', data, function (res) {
-      if (res == 'success') {
-        $('.js-petition-error').text('');
-        $('.petition__form').hide();
-        $('.petition__reset').show();
+    var emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var namePattern = /^(([A-Za-zšđžčćŠĐŽČĆ]+[\-\']?)*([A-Za-zšđžčćŠĐŽČĆ]+)?\s)+([A-Za-zšđžčćŠĐŽČĆ]+[\-\']?)*([A-Za-zšđžčćŠĐŽČĆ]+)?$/;
+    if ($('#petition-email').val().match(emailPattern)) {
+      if ($('#petition-name').val().match(namePattern)) {
+        var data = {
+          peticija: 'TESTimasjajca.djnd' + $('#petition-djnd')[0].checked + '.dzzz' + $('#petition-greenpeace')[0].checked,
+          name: $('#petition-name').val(),
+          email: $('#petition-email').val(),
+        };
+        console.log(data);
+        $.get('https://djapi.knedl.si/sign/', data, function (res) {
+          console.log(res);
+          if (res == 'Saved') {
+            $('.js-petition-error').text('');
+            $('.petition__form').hide();
+            $('.petition__reset').show();
+          } else {
+            console.log('error', res);
+            $('.js-petition-error').text('Napaka: ' + res);
+          }
+        });
       } else {
-        console.log('error', res);
-        $('.js-petition-error').text('Napaka: ' + res);
+        alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.')
       }
-    });
+    } else {
+      alert('Tvoj email ne izgleda kot email. Prosim poskusi ponovno.')
+    }
   });
 
   $('.petition__reset .btn-link').on('click', function () {
@@ -94,20 +103,20 @@ $(function ready() {
   });
 
   var link = document.location.href;
-  $.ajax({
-    method: 'POST',
-    url: 'http://www.djnd.si/yomamasofat/',
-    data: {
-      fatmama: document.location.href,
-    },
-    success: function (resp) {
-      link = resp;
-    }
-  });
+  // $.ajax({
+  //   method: 'POST',
+  //   url: 'http://www.djnd.si/yomamasofat/',
+  //   data: {
+  //     fatmama: document.location.href,
+  //   },
+  //   success: function (resp) {
+  //     link = resp;
+  //   }
+  // });
 
-  var title = 'Break Free SI';
-  var text = 'Čas je zdaj: osvobodimo se fosilnih goriv!';
-  var hashtags = '#breakfree';
+  var title = 'Imaš jajca?';
+  var text = 'Baterijsko rejo moramo ukiniti!';
+  var hashtags = '#imasjajca';
   //social
   $('.js-facebook').on('click', function () {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);

@@ -17,8 +17,15 @@ p {
   font-family: 'GraphCondensedWeb', sans-serif;
 }
 
+@media(max-width: 480px) {
+  .font-graph {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}
+
 .text-turquoise {
-  color: #000000;
+  color: #222222;
 }
 
 .text-red {
@@ -30,7 +37,7 @@ p {
 }
 
 a {
-  color: #000000;
+  color: #222222;
   text-decoration: none;
 }
 
@@ -167,7 +174,7 @@ small {
 
 @media screen and (max-width: 991px) {
   .landing {
-    min-height: 728px;
+    /* min-height: 728px; */
   }
 
   .landing .landing__title {
@@ -184,7 +191,7 @@ small {
 
 @media screen and (max-width: 480px) {
   .landing {
-    min-height: 450px;
+    /* min-height: 450px; */
   }
 
   .landing .landing__title {
@@ -227,7 +234,7 @@ small {
 .demands .demands__title {
   font-family: 'Roboto Mono', monospace;
   display: inline-block;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -246,14 +253,14 @@ small {
   left: -9999px;
   right: 0;
   /*width: 447px;*/
-  background-color: #000000;
+  background-color: #222222;
   z-index: 1;
 }
 
 @media screen and (max-width: 1199px) {
-  .demands .turquoise-box {
+  /* .demands .turquoise-box {
     right: 103px;
-  }
+  } */
 }
 
 .demands .demand {
@@ -311,15 +318,15 @@ small {
 }
 
 @media screen and (max-width: 991px) {
-  .demands .demands__title {
+  /* .demands .demands__title {
     padding-bottom: 0;
-  }
+  } */
 
-  .demands .turquoise-box {
+  /* .demands .turquoise-box {
     bottom: 50px;
     left: 0;
     width: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 480px) {
@@ -327,6 +334,7 @@ small {
     font-size: 50px;
     line-height: 51px;
     padding-top: 45px;
+    padding-bottom: 65px;
   }
 
   .demands .turquoise-box {
@@ -343,6 +351,11 @@ small {
   }
 }
 
+.petition {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
 .petition .title-container {
   padding-top: 20px;
   padding-bottom: 35px;
@@ -354,7 +367,7 @@ small {
   line-height: 53px;
   /*display: inline;*/
   vertical-align: text-top;
-  color: #000000;
+  color: #222222;
   font-weight: 400;
 }
 
@@ -388,7 +401,7 @@ small {
 
 .petition .petition__form,
 .petition .petition__reset {
-  padding-top: 180px;
+  padding-top: 50px;
   padding-bottom: 40px;
 }
 
@@ -399,10 +412,10 @@ small {
 .petition .form-control {
   border: 2px solid #000;
   border-radius: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 15px;
   padding: 0 15px;
-  color: #000000;
+  color: #222222;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -410,31 +423,32 @@ small {
 
 .petition .btn-default {
   font-family: 'Roboto Mono', monospace;
-  font-size: 56px;
+  font-size: 45px;
   line-height: 76px;
   background-color: #ffffff;
-  color: #000000;
+  color: #222222;
   border: 0;
   border-radius: 0;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .petition .btn-default:hover {
-  color: #000000;
+  color: #ffffff;
   background-color: #ffbf39;
 }
 
 .petition .btn-yellow {
   background-color: #ffbf39;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 .petition .btn-yellow:hover {
-  color: #000000;
+  /* color: #222222; */
 }
 
 @media screen and (max-width: 991px) {
   .petition .title-container {
-    padding-top: 0;
+    padding-top: 35px;
     padding-bottom: 35px;
   }
 
@@ -518,7 +532,7 @@ small {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #000000;
+  color: #222222;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -537,7 +551,7 @@ small {
 }
 
 .petition__reset .social-box {
-  background-color: #000000;
+  background-color: #ffffff;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -552,14 +566,14 @@ small {
 .petition__reset .btn,
 .petition__reset .btn:hover {
   font-weight: bold;
-  color: #000000;
+  color: #222222;
   padding-left: 0;
   padding-right: 0;
   text-decoration: underline;
 }
 
 .footer {
-  background-color: #000000;
+  background-color: #222222;
   line-height: 64px;
 }
 
@@ -580,15 +594,25 @@ small {
 
 .btn-social {
   background: #ffbf39;
-  color: #000000;
+  color: #222222;
   width: 35px;
   height: 35px;
   padding: 5px 5px 5px 5px;
   border-radius: 0;
 }
 
+@media(max-width: 991px) {
+  .btn-social {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .btn-social svg {
-  fill: #000000;
+  fill: #222222;
 }
 
 .btn-social:hover svg {
@@ -596,10 +620,10 @@ small {
 }
 
 .footer__people {
-  font-size: 18px;
+  font-size: 14px;
   color: #ffffff;
   line-height: 1.2em;
-  padding-top: 10px;
+  padding-top: 14px;
 }
 .footer__people a {
   color: #ffffff;
@@ -610,6 +634,7 @@ small {
 @media screen and (max-width: 480px) {
   .footer {
     text-align: center;
+    padding-bottom: 20px;
   }
 
   .footer .social__title {
@@ -667,7 +692,7 @@ small {
 }
 
 .chatbox .frame-container {
-  background-color: #000000;
+  background-color: #222222;
   width: 100%;
   height: 400px;
   max-height: 85vh;
@@ -712,6 +737,7 @@ small {
 .btn-showall {
   font-size: 24px !important;
   line-height: 36px !important;
+  white-space: normal;
 }
 
 .signatures__title {
@@ -730,25 +756,43 @@ small {
 .box {
   width: 300px;
   height: 300px;
-  background: #000000;
+  background: #222222;
   position: relative;
   margin: auto;
   color: #ffffff;
   cursor: pointer;
 
   margin-bottom: 30px;
+
+  display: block;
 }
+.box:hover {
+  text-decoration: none;
+  color: #222222;
+}
+
+@media (min-width: 480px) {
+  .box {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 .box-yellow {
   background: #ffbf39;
-  color: #000000;
+  color: #222222;
+  width: 300px;
+  height: 300px;
+  cursor: default;
 }
 .box p {
   text-align: center;
-  padding-top: 30px;
+  padding: 40px;
+  font-size: 24px;
 }
 
 .header-thing {
-  background: #000000;
+  background: #222222;
   position: relative;
   width: 100%;
 
@@ -757,9 +801,15 @@ small {
   color: #ffffff;
   font-family: 'Roboto Mono', monospace;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 80px;
   padding-top: 50px;
   padding-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+  .header-thing h1 {
+    font-size: 50px;
+  }
 }
 
 .logo-circle {
@@ -769,6 +819,149 @@ small {
   width: 100px;
   height: 100px;
 
-  top: -60px;
-  left: -15px;
+  top: -75px;
+  left: -25px;
+
+  background-image: url('./img/logo.png');
+  background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .logo-circle {
+    left: 20px;
+  }
+}
+
+.petition-boxes {
+  padding-top: 60px;
+}
+
+.chicken {
+  width: 225px;
+  height: 290px;
+  background-image: url('./img/chicken-big.png');
+  background-position: -225px 0;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 0;
+  right: -220px;
+  z-index: 200;
+
+  animation: dance 5s steps(1) infinite;
+}
+
+@keyframes dance {
+  0% {
+    background-position: -225px 0;
+  }
+  50% {
+    background-position: -450px 0;
+  }
+}
+
+.egg {
+  width: 60px;
+  height: 80px;
+  background-image: url('./img/egg-big.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 200;
+
+  position: absolute;
+  right: -180px;
+  bottom: -200px;
+
+  animation: egg 5s steps(1) infinite;
+}
+
+@keyframes egg {
+  0% {
+    bottom: -200px;
+    right: -180px;
+  }
+  10% {
+    bottom: -260px;
+    right: -180px;
+  }
+  20% {
+    bottom: -320px;
+    right: -180px;
+  }
+  30% {
+    bottom: -380px;
+    right: -180px;
+  }
+  40% {
+    bottom: -440px;
+    right: -180px;
+  }
+  50% {
+    bottom: -200px;
+    right: -100px;
+  }
+  60% {
+    bottom: -260px;
+    right: -100px;
+  }
+  70% {
+    bottom: -320px;
+    right: -100px;
+  }
+  80% {
+    bottom: -380px;
+    right: -100px;
+  }
+  90% {
+    bottom: -440px;
+    right: -100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .chicken,
+  .egg {
+    display: none;
+  }
+}
+
+.box-game {
+  background-image: url('./img/kure.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: bold;
+}
+.box-game:hover {
+  color: #ffffff;
+}
+.box-game:hover::after,
+.box-blog:hover::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url('./img/puscica.svg');
+  background-repeat: no-repeat;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+}
+
+@media (max-width: 480px) {
+  .box-game:hover::after,
+  .box-blog:hover::after {
+    margin-top: 10px;
+  }
+}
+
+.box-blog {
+  background-image: url('https://static.tumblr.com/10c56ece65533bc743af72950dbb74d9/1imdldp/Ejnp65wq2/tumblr_static_3fffrr3unh8gk8w884csg40kc_2048_v2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #222222;
+  border: 5px solid #222222;
 }
