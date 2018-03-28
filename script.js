@@ -34,11 +34,6 @@ $(function ready() {
     // }, 150);
   }
 
-  $.get('https://djapi.knedl.si/getKuraSignatures/', function(r) {
-    var all = r.names;
-    $('.js-signaturenames').text(all)
-  });
-
   function showAllSignatures() {
     $('.js-more').remove();
     $('.js-signaturenames').removeClass('show-less');
@@ -50,11 +45,12 @@ $(function ready() {
   $.get('https://djapi.knedl.si/getKuraSignatures/', function(r) {
     // var count = parseInt(res, 10);
     var all = r.names;
+    $('.js-signaturenames').text(all)
     var count = r.counter;
     if (!isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
       $('.js-signaturecount').text(count);
-      $('.js-signaturecount-bottom').text(r.names.split(',').length);
+      // $('.js-signaturecount-bottom').text(r.names.split(',').length);
       $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
       $('.petition .progress-bar span').text(percent + '%');
     }
@@ -67,7 +63,7 @@ $(function ready() {
     if ($('#petition-email').val().match(emailPattern)) {
       if ($('#petition-name').val().match(namePattern)) {
         var data = {
-          peticija: 'TESTimasjajca.djnd' + $('#petition-djnd')[0].checked + '.dzzz' + $('#petition-greenpeace')[0].checked,
+          peticija: 'imasjajca.djnd' + $('#petition-djnd')[0].checked + '.dzzz' + $('#petition-greenpeace')[0].checked,
           name: $('#petition-name').val(),
           email: $('#petition-email').val(),
         };
