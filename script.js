@@ -59,7 +59,7 @@ $(function ready() {
   $('.petition__form').on('submit', function (event) {
     event.preventDefault();
     var emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    var namePattern = /^(([A-Za-zšđžčćŠĐŽČĆ]+[\-\']?)*([A-Za-zšđžčćŠĐŽČĆ]+)?\s)+([A-Za-zšđžčćŠĐŽČĆ]+[\-\']?)*([A-Za-zšđžčćŠĐŽČĆ]+)?$/;
+    var namePattern = /^(([A-Za-zšđžčćŠĐŽČĆé]+[\-\']?)*([A-Za-zšđžčćŠĐŽČĆé]+)?\s)+([A-Za-zšđžčćŠĐŽČĆé]+[\-\']?)*([A-Za-zšđžčćŠĐŽČĆé]+)?$/;
     if ($('#petition-email').val().match(emailPattern)) {
       if ($('#petition-name').val().match(namePattern)) {
         var data = {
@@ -115,7 +115,7 @@ $(function ready() {
   var hashtags = '#imasjajca';
   //social
   $('.js-facebook').on('click', function () {
-    var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
+    var url = 'https://www.facebook.com/dialog/feed?app_id=374830049649678&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
     window.open(url, '_blank');
     // ga('send', 'event', 'social', 'facebook');
     return false;
