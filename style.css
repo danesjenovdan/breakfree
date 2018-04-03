@@ -400,7 +400,7 @@ small {
 }
 
 .petition .progress-bar {
-  background-color: #ffbf39;
+  background-color: #de3c00;
 }
 
 .petition .progress__note {
@@ -1018,7 +1018,14 @@ small {
 }
 
 .petition .progress-bar-milestone {
-  width: 50% !important;
+  width: 33.33% !important;
+  background-color: #ffbf39;
+  position: relative;
+  top: -35px;
+}
+
+.petition .progress-bar-milestone-1 {
+  width: 33.33% !important;
   background-color: orange;
   position: relative;
   top: -35px;
@@ -1026,12 +1033,12 @@ small {
 
 .progress__arrow {
   height: 30px;
-  width: 50%;
+  width: 33.33%;
   border-right: 2px solid #333;
   margin: -10px 0 10px 0;
 }
 
 .progress__arrow--10k {
-  width: 100%;
+  width: 66.66%;
   margin-top: -25px;
 }
