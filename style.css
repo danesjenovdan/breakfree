@@ -407,6 +407,12 @@ small {
   font-size: 15px;
 }
 
+@media (max-width: 767px) {
+  .petition .progress__note {
+    color: #ffffff;
+  }
+}
+
 .petition .petition__form,
 .petition .petition__reset {
   padding-top: 50px;
