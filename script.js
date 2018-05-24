@@ -34,19 +34,19 @@ $(function ready() {
     // }, 150);
   }
 
-  function showAllSignatures() {
+  // function showAllSignatures() {
     $('.js-more').remove();
     $('.js-signaturenames').removeClass('show-less');
-  }
+  // }
 
-  $('.js-more').on('click', showAllSignatures);
+  // $('.js-more').on('click', showAllSignatures);
 
   var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
-  $.get('https://djapi.knedl.si/getKuraSignatures/', function(r) {
+  // $.get('https://djapi.knedl.si/getKuraSignatures/', function(r) {
     // var count = parseInt(res, 10);
-    var all = r.names;
-    $('.js-signaturenames').text(all)
-    var count = r.counter;
+    // var all = r.names;
+    $('.js-signaturenames').text('Peticijo je podpisalo 13410 podpisnic in podpisnikov. Njihova imena smo odstranili, ko je vstopila v veljavo GDPR.')
+    var count = 13410;
     if (!isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
       $('.js-signaturecount').text(count);
@@ -54,7 +54,7 @@ $(function ready() {
       $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
       $('.petition .progress-bar span').text(percent + '%');
     }
-  });
+  // });
 
   $('.petition__form').on('submit', function (event) {
     event.preventDefault();
