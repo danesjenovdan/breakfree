@@ -6,6 +6,11 @@
   font-style: normal;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body,
 p {
   font-family: 'Noto Sans', sans-serif;
@@ -54,13 +59,14 @@ small {
 
 .landing .landing__title {
   display: inline-block;
-  font-size: 136px;
+  font-size: 110px;
   line-height: 117px;
   padding-top: 120px;
   padding-bottom: 140px;
   margin: 0 !important;
   position: relative;
-  left: 275px;
+  left: 120px;
+  max-width: calc(100% - 275px);
 }
 
 .landing .bullhorn {
@@ -123,7 +129,7 @@ small {
   right: 0;
   width: auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 50px;
   z-index: 98;
 }
 
@@ -161,13 +167,16 @@ small {
 
 @media screen and (max-width: 991px) {
   .landing {
-    min-height: 728px;
+    min-height: 620px;
   }
 
   .landing .landing__title {
+    font-size: 85px;
+    line-height: 90px;
     position: absolute;
-    left: auto;
+    left: 20px;
     right: 0;
+    max-width: 100%;
   }
 
   .landing .gray-box {
@@ -178,7 +187,7 @@ small {
 
 @media screen and (max-width: 480px) {
   .landing {
-    min-height: 450px;
+    min-height: 400px;
   }
 
   .landing .landing__title {
@@ -222,24 +231,31 @@ small {
   display: inline-block;
   font-size: 116px;
   line-height: 103px;
-  padding-top: 190px;
-  padding-bottom: 190px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   padding-left: 45px;
   margin: 0 !important;
   position: relative;
   z-index: 2;
 }
 
+.demands--right .demands__title {
+  text-align: right;
+}
+
 .demands .turquoise-box {
   position: absolute;
   top: 0;
   bottom: 0;
-  /*left: -65px;*/
   left: -9999px;
   right: 203px;
-  /*width: 447px;*/
   background-color: #35c9c5;
   z-index: 1;
+}
+
+.demands--right .turquoise-box {
+  right: -9999px;
+  left: 203px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -252,7 +268,7 @@ small {
   font-size: 14px;
   padding-left: 60px;
   position: relative;
-  min-height: 108px;
+  min-height: 250px;
   margin-bottom: 40px;
   margin-top: 20px;
 }
@@ -270,6 +286,8 @@ small {
 .demands .demand__text {
   padding: 40px 30px;
   background-color: #f0f5fa;
+  min-height: 300px;
+  font-size: 20px;
 }
 
 .demands .demand__hover {
@@ -333,11 +351,40 @@ small {
     top: 18px;
     margin-top: 0;
   }
+
+  .demands .demand__hover span {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .demands .demand__text {
+    font-size: 14px;
+    min-height: 350px;
+  }
+}
+
+.cta {
+  margin-top: 120px;
+  margin-bottom: 180px;
+}
+
+.cta .cta__title {
+  font-size: 48px;
+}
+
+@media screen and (max-width: 480px) {
+  .cta {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .cta .cta__title {
+    font-size: 32px;
+  }
 }
 
 .petition .title-container {
-  padding-top: 180px;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
 }
 
 .petition .petition__title {
@@ -345,6 +392,7 @@ small {
   line-height: 53px;
   /*display: inline;*/
   vertical-align: text-top;
+  margin-top: 0;
 }
 
 .petition .petition__title span {
@@ -376,7 +424,6 @@ small {
 
 .petition .petition__form,
 .petition .petition__reset {
-  padding-top: 180px;
   padding-bottom: 40px;
 }
 
