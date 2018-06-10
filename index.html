@@ -6,29 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="theme-color" content="#35c9c5">
-  <link rel="icon" type="image/png" sizes="200x200" href="img/breakfree-logo-200px.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="img/breakfree-logo-64px.png">
+  <meta name="theme-color" content="#0b16f3">
+  <link rel="icon" type="image/png" sizes="200x200" href="{{icon}}">
+  <link rel="icon" type="image/png" sizes="64x64" href="{{icon}}">
 
   <meta property="fb:app_id" content="301375193309601">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Break free, Slovenia!">
-  <meta property="og:description" content="Podpri poziv gibanja Break Free SI in od vlade RS zahtevaj, da poravna svoj podnebni dolg.">
-  <meta property="og:image" content="http://danesjenovdan.si/img/breakfree-og2.png?new">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{og-image}}">
 
   <meta name="twitter:creator" content="@danesjenovdan">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Break free, Slovenia!">
-  <meta name="twitter:description" content="Podpri poziv gibanja Break Free SI in od vlade RS zahtevaj, da poravna svoj podnebni dolg.">
-  <meta name="twitter:image" content="http://danesjenovdan.si/img/breakfree-og2.png?new">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{og-image}}">
 
   <meta name="author" content="danesjenovdan">
-  <meta name="description" content="Podpri poziv gibanja Break Free SI in od vlade RS zahtevaj, da poravna svoj podnebni dolg.">
-  <title>Break Free SI</title>
+  <meta name="description" content="{{description}}">
+  <title>{{title}}</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700">
-  <link rel="stylesheet" href="style.css?v4">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=latin-ext">
+  <link rel="stylesheet" href="style.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,94 +41,93 @@
 
 <body>
   <div class="container">
-    <div class="scroll-arrow font-graph bounce">
-      <span>↓</span>
-    </div>
     <div class="landing">
-      <!-- <div class="bullhorn"></div> -->
-      <!-- <div class="gray-box">
-        <div class="bubble-arrow font-graph text-center">
-          <a href="#" class="js-open-chatbox">POVEJ MI VEČ!</a>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="landing__logo">
+            <img src="img/lightbulb-copy.svg" alt="logo">
+          </div>
         </div>
-      </div> -->
-      <h1 class="font-graph landing__title">
-        EU spreminja avtorsko pravo. To samo po sebi ni slaba novica, toda štirje členi bodo <span class="text-turquoise">uničili</span> internet, kot ga poznamo.
-      </h1>
+        <div class="col-md-8">
+          <h1 class="landing__title text-blue">
+            EU spreminja avtorsko pravo.
+          </h1>
+          <h2 class="landing__subtitle">
+            To samo po sebi ni slaba novica, toda <strong class="text-blue">štirje členi</strong> bodo uničili internet, kot ga poznamo.
+          </h2>
+        </div>
+      </div>
     </div>
     <div class="demands clearfix">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="turquoise-box"></div>
-          <h2 class="font-graph demands__title">
+      <div class="row row-md-flex">
+        <div class="col-md-6 col-md-flex">
+          <div class="pink-box"></div>
+          <h2 class="demands__title">
             USTAVITI<br>
             MORAMO<br>
-            ČLENA 11 IN 13<span class="text-orange">:</span>
+            ČLENA<br>
+            <strong>11</strong> IN <strong>13</strong>:
           </h2>
         </div>
         <div class="col-md-6">
           <div class="demand">
-            <div class="demand__number text-turquoise font-graph">11.</div>
+            <div class="demand__number text-pink">11.</div>
             <div class="demand__text">
               Lobisti velikih založnikov starih medijev s preživetimi poslovnimi modeli poskušajo ukiniti prost pretok informacij in računati za povezave do svojih vsebin. Splet brez linkov bi bil kot svet brez cest.
             </div>
-            <div class="demand__hover font-graph">
+            <div class="demand__hover">
               <span>11. člen ogroža tvojo pravico do brezplačnega linkanja</span>
             </div>
           </div>
           <div class="demand">
-            <div class="demand__number text-turquoise font-graph">13.</div>
+            <div class="demand__number text-pink">13.</div>
             <div class="demand__text">
               Avtorska dela lahko lastniki že zdaj odstranijo s spletnih platform, tako da zahtevajo njihov umik. Zdaj pa namerava EU uvesti avtomatske cenzorske filtre že ob nalaganju vsebin. Ti ne bodo znali presoditi, kdaj gre za pošteno uporabo in ti bodo tako onemogočali tudi objavo vsebin, ki ne kršijo avtorskih pravic.
             </div>
-            <div class="demand__hover font-graph">
+            <div class="demand__hover">
               <span>13. člen ogroža tvojo pravico do memov, parodij in citatov</span>
             </div>
           </div>
-          <!-- <div class="demand__note">
-            <small>Celotno besedilo poziva vladi si preberite <a href="https://docs.google.com/document/d/1m-g-iuwogUaCGja90QIwHqRXZWbskLNJ54PD5YekG1k/edit" target="_blank"><strong class="text-turquoise">tukaj</strong></a>.</small>
-          </div> -->
         </div>
       </div>
     </div>
     <div class="demands demands--right clearfix">
-      <div class="row">
-        <div class="col-md-6 col-md-push-6">
-          <div class="turquoise-box"></div>
-          <h2 class="font-graph demands__title">
+      <div class="row row-md-flex">
+        <div class="col-md-6 col-md-push-6 col-md-flex">
+          <div class="pink-box"></div>
+          <h2 class="demands__title">
             SPREMENITI<br>
             MORAMO<br>
-            ČLENA 3 IN 4<span class="text-orange">:</span>
+            ČLENA<br>
+            <strong>3</strong> IN <strong>4</strong>:
           </h2>
         </div>
         <div class="col-md-6 col-md-pull-6">
           <div class="demand">
-            <div class="demand__number text-turquoise font-graph">3.</div>
+            <div class="demand__number text-pink">3.</div>
             <div class="demand__text">
               Države članice sicer lahko razširijo pravico tudi v korist medijev, zasebnih raziskovalcev in nevladnikov, a ta pravica je preveč pomembna, da bi bila predmet njihove dobre volje.
             </div>
-            <div class="demand__hover font-graph">
+            <div class="demand__hover">
               <span>3. člen tekstovno in podatkovno rudarjenje dovoljuje le ozkemu naboru raziskovalcev</span>
             </div>
           </div>
           <div class="demand">
-            <div class="demand__number text-turquoise font-graph">4.</div>
+            <div class="demand__number text-pink">4.</div>
             <div class="demand__text">
               Tudi v tem primeru je očitno, da si države puščajo prostor za monetizacijo uporabe avtorskih del v izobraževanju. To ni dopustno, EU bi morala odločno zaščititi univerzalen dostop do znanja.
             </div>
-            <div class="demand__hover font-graph">
+            <div class="demand__hover">
               <span>4. člen dovoljuje rabo avtorskih vsebin v izobraževanju, a hkrati omogoča uvedbo licenčnin</span>
             </div>
           </div>
-          <!-- <div class="demand__note">
-            <small>Celotno besedilo poziva vladi si preberite <a href="https://docs.google.com/document/d/1m-g-iuwogUaCGja90QIwHqRXZWbskLNJ54PD5YekG1k/edit" target="_blank"><strong class="text-turquoise">tukaj</strong></a>.</small>
-          </div> -->
         </div>
       </div>
     </div>
     <div class="cta">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="cta__title font-graph">
+          <h3 class="cta__title">
             Če želimo, da EU pri spremembah avtorskega prava na prvo mesto postavi državljanke in državljane namesto kapitala, moramo skupaj povzdigniti glas. Odločitev je v rokah evropskih poslank in poslancev, nagovorimo jih!
           </h3>
         </div>
@@ -137,14 +137,14 @@
       <div class="row">
         <div class="col-md-12">
           <div class="title-container">
-            <h3 class="petition__title font-graph">
-              Ko zberemo <span class="text-turquoise">5000</span> podpisov, bomo poziv predali slovenskim poslancem v Evropskem parlamentu.
+            <h3 class="petition__title">
+              Ko zberemo <strong class="text-blue">5000</strong> podpisov, bomo poziv predali slovenskim poslancem v Evropskem parlamentu.
             </h3>
           </div>
         </div>
         <div class="col-lg-6 col-md-7">
           <div class="title-container">
-            <h3 class="petition__title font-graph">
+            <h3 class="petition__title">
               Zahtevaj, da s svojim glasom zaščitijo tvoje internetno življenje!
             </h3>
           </div>
@@ -164,22 +164,27 @@
             <input id="petition-name" class="form-control" placeholder="Ime in priimek">
             <input id="petition-email" class="form-control" placeholder="E-pošta" type="email">
             <div class="checkbox">
-              <input id="petition-greenpeace" type="checkbox">
-              <label for="petition-greenpeace">Podpišite me tudi na peticijo <a href="https://savethelink.org/">Save the link</a>.</label>
+              <input id="petition-savethelink" type="checkbox">
+              <label for="petition-savethelink">
+                <span>Podpišite me tudi na peticijo <a target="_blank" href="https://savethelink.org/">Save the link</a>.</span>
+              </label>
             </div>
             <div class="checkbox">
               <input id="petition-djnd" type="checkbox">
-              <label for="petition-djnd">Naroči me na novice Danes je nov dan.</label>
+              <label for="petition-djnd">
+                <span>Naroči me na novice <a target="_blank" href="https://danesjenovdan.si/">Danes je nov dan</a>.</span>
+              </label>
+            </div>
+            <div class="petition__consent">
+              S podpisom se strinjaš, da tvoje ime objavimo in ga posredujemo slovenskim poslancem v Evropskem parlamentu. Tvoje e-pošte ne bomo izdali nikomur.
             </div>
             <div class="js-petition-error"></div>
             <button type="submit" class="btn btn-default btn-block">Podpišem!</button>
           </form>
           <div class="petition__reset">
             <div class="petition__thanks lead">Hvala za podpis!</div>
-            <!--<p>Ker vlada spi na praznih obljubah, ji bomo zapeli budnico <strong><a href="https://www.facebook.com/events/429212530753401/" class="text-turquoise" target="_blank">v sredo, 29.3.2017 ob 16. uri</a></strong>, kjer ji bomo predali tudi naše zahteve.</p>
-            <p><strong><a href="https://www.facebook.com/events/429212530753401/" class="text-turquoise" target="_blank">Pridruži se nam!</a></strong> In deli naš poziv s prijatelji!</p>-->
             <div class="social-box clearfix text-center">
-              <span class="font-graph">POVEJ NAPREJ!</span>
+              <span class="">POVEJ NAPREJ!</span>
               <div class="buttons">
                 <button class="btn btn-social js-twitter">
                   <svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -203,20 +208,20 @@
                 </button>
               </div>
             </div>
-            <button class="btn btn-link text-turquoise">Osveži formo</button>
+            <button class="btn btn-link text-blue">Osveži formo</button>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-md-push-8">
-          <h2 class="font-graph signatures__title">Organizacije</h2>
+        <!-- <div class="col-md-4 col-md-push-8">
+          <h2 class="signatures__title">Organizacije</h2>
           <div class="signatures">
             <p class="signature-names">
             </p>
           </div>
-        </div>
-        <div class="col-md-8 col-md-pull-4">
-          <h2 class="font-graph signatures__title">Podpisnice in podpisniki</h2>
+        </div> -->
+        <div class="col-md-12">
+          <h2 class="signatures__title">Podpisnice in podpisniki</h2>
           <div class="signatures">
             <p class="signature-names js-signaturenames show-less">
             </p>
@@ -230,7 +235,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="footer__social font-graph">
+          <div class="footer__social">
             <span class="social__title">POVEJ NAPREJ!</span>
             <button class="btn btn-social js-twitter">
               <svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -255,8 +260,8 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="text-right font-graph footer__people">
-            <a href="http://danesjenovdan.si/" target="_blank">Danes je nov dan</a>
+          <div class="text-right  footer__people">
+            <a href="http://danesjenovdan.si/" target="_blank" class="text-blue">Danes je nov dan</a>
           </div>
         </div>
       </div>
@@ -264,7 +269,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="script.js?v5"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
