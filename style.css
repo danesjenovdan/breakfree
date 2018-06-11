@@ -109,7 +109,6 @@ small {
 @media screen and (max-width: 480px) {
   .landing .landing__logo {
     max-width: 200px;
-    margin: 0 auto;
   }
 
   .landing .landing__title {
@@ -302,10 +301,22 @@ small {
   margin-bottom: 100px;
 }
 
+.cta .cta__logo {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .cta .cta__title {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 300;
+}
+
+@media screen and (max-width: 991px) {
+  .cta .cta__logo {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -314,13 +325,13 @@ small {
     margin-bottom: 70px;
   }
 
+  .cta .cta__logo {
+    max-width: 200px;
+  }
+
   .cta .cta__title {
     font-size: 28px;
   }
-}
-
-.petition .title-container {
-  padding-bottom: 20px;
 }
 
 .petition .petition__title {
@@ -329,7 +340,16 @@ small {
   font-weight: 300;
   vertical-align: text-top;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+}
+
+.petition .petition__title--box {
+  background-color: #0b16f3;
+  color: #fff;
+  font-weight: 400;
+  padding: 30px;
+  line-height: 1.4;
+  margin-bottom: 30px;
 }
 
 .petition .petition__title strong {
@@ -357,7 +377,6 @@ small {
 
 .petition .petition__form,
 .petition .petition__reset {
-  padding-top: 10px;
   padding-bottom: 40px;
 }
 
@@ -377,18 +396,21 @@ small {
 .petition .btn-default:active,
 .petition .btn-default:focus,
 .petition .btn-default[disabled] {
-  font-size: 56px;
+  font-size: 36px;
+  font-weight: 900;
   line-height: 76px;
   background-color: #fe8182;
   color: #000;
   border: 0;
   border-radius: 0;
+  text-transform: uppercase;
+  transition: 150ms all ease-in-out;
 }
 
 .petition .btn-default:not([disabled]):hover,
 .petition .btn-default:not([disabled]):active:hover,
 .petition .btn-default:not([disabled]):focus:hover {
-  color: #0b16f3;
+  color: #fff;
 }
 
 @media screen and (max-width: 991px) {
@@ -519,7 +541,7 @@ small {
   padding: 10px;
   font-size: 30px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .petition__reset .social-box .buttons {
@@ -546,13 +568,13 @@ small {
 
 .footer .social__title {
   margin-right: 30px;
-  font-weight: 700;
+  font-weight: 300;
   vertical-align: middle;
 }
 
 .btn-social {
   background: transparent;
-  color: #0b16f3;
+  color: #fff;
   width: 35px;
   height: 35px;
   padding: 4px 0;
@@ -560,7 +582,7 @@ small {
 }
 
 .btn-social svg {
-  fill: #0b16f3;
+  fill: #fff;
   transition: 150ms all ease-in-out;
 }
 
@@ -574,6 +596,24 @@ small {
 
 .footer__people {
   font-size: 24px;
+}
+
+.footer__people a,
+.footer__people a:visited,
+.footer__people a:active,
+.footer__people a:focus {
+  color: #fff;
+  padding: 3px;
+  border-radius: 4px;
+  transition: 150ms all ease-in-out;
+}
+
+.footer__people a:hover,
+.footer__people a:hover:visited,
+.footer__people a:hover:active,
+.footer__people a:hover:focus {
+  background-color: #0b16f3;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -629,8 +669,8 @@ small {
 }
 
 .signatures__title {
-  font-size: 38px;
-  font-weight: 300;
+  font-size: 30px;
+  font-weight: 700;
   padding-left: 30px;
 }
 
