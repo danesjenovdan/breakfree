@@ -93,9 +93,9 @@ $(function ready() {
     },
   });
 
-  var title = '{{title}}';
-  var text = '{{social-text}}';
-  var hashtags = '#{{hashtag}}';
+  var title = 'Copyleft';
+  var text = 'Podpiši peticijo in od evropskih poslank/-cev zahtevaj, da glasujejo proti reformi avtorskega prava ter zaščitijo tvoje internetno življenje!';
+  var hashtags = '#copyleft';
   //social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
