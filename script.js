@@ -1,6 +1,6 @@
 $(function ready() {
   var petitionName = 'copyleft';
-  var subject = '';
+  var subject = 'Fix copyright before it is too late / Popravimo avtorsko pravo, preden bo prepozno';
   var content = '';
   $.get('./mail.html', function(res) {
     content = res;
