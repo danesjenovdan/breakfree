@@ -93,7 +93,7 @@ $(function ready() {
     },
   });
 
-  var title = 'Copyleft';
+  var title = 'Copyright, Copyleft, Copywrong';
   var text = 'Podpiši peticijo in od evropskih poslank/-cev zahtevaj, da glasujejo proti reformi avtorskega prava ter zaščitijo tvoje internetno življenje!';
   var hashtags = '#copyleft';
   //social
