@@ -2,6 +2,9 @@ $(function ready() {
   var petitionName = 'copyleft';
   var subject = '';
   var content = '';
+  $.get('./mail.html', function(res) {
+    content = res;
+  });
 
   function showAllSignatures() {
     $('.js-more').remove();
