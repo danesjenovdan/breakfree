@@ -1,5 +1,7 @@
 $(function ready() {
   var petitionName = 'copyleft';
+  var subject = '';
+  var content = '';
 
   function showAllSignatures() {
     $('.js-more').remove();
@@ -45,13 +47,11 @@ $(function ready() {
       name: $('#petition-name').val(),
       email: $('#petition-email').val(),
       peticija: petitionName + '.djnd=' + $('#petition-djnd')[0].checked + '.savethelink=' + $('#petition-savethelink')[0].checked,
+      subject,
+      content,
     };
 
-    console.log(data);
-    $('.petition__form').hide();
-    $('.petition__reset').show();
-
-    $.get('https://api.djnd.si/sign/', data, function(res) {
+    $.post('https://api.djnd.si/sign-mail/', data, function(res) {
         if (res === 'Saved') {
           $('.js-petition-error').text('');
           $('.petition__form').hide();
@@ -59,6 +59,7 @@ $(function ready() {
         } else {
           console.error('error', res);
           $('.js-petition-error').text('Napaka: ' + res);
+          $('.petition__form').find(':input').attr('disabled', false);
         }
       }
     );

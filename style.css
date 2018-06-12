@@ -233,8 +233,31 @@ small {
   display: none;
 }
 
-.demands .demand__note {
-  padding-left: 60px;
+.demands .demand__more-link::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.demands .demand__more-link a,
+.demands .demand__more-link a:visited,
+.demands .demand__more-link a:active {
+  display: block;
+  float: right;
+  color: #fff;
+  text-align: right;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: -15px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: 150ms all ease-in-out;
+}
+
+.demands .demand__more-link a:hover,
+.demands .demand__more-link a:hover:visited,
+.demands .demand__more-link a:hover:active {
+  background-color: rgba(254, 129, 130, 0.7);
 }
 
 @media screen and (max-width: 991px) {
@@ -354,6 +377,10 @@ small {
 
 .petition .petition__title strong {
   font-size: 64px;
+}
+
+.petition .petition__title span {
+  font-weight: 700;
 }
 
 .petition .progress-container {
@@ -603,7 +630,7 @@ small {
 .footer__people a:active,
 .footer__people a:focus {
   color: #fff;
-  padding: 3px;
+  padding: 3px 5px;
   border-radius: 4px;
   transition: 150ms all ease-in-out;
 }
