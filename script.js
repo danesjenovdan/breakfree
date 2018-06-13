@@ -81,6 +81,18 @@ $(function ready() {
     $('.petition__reset').hide();
   });
 
+  // hover state on ios
+  $(document).on('touchstart', function(event) {
+    const $hover = $(event.target).closest('.demand__hover, .demand__text');
+    const $demands = $('.demand');
+    if ($hover.length) {
+      $demands.removeClass('hover');
+      $hover.closest('.demand').addClass('hover');
+    } else {
+      $demands.removeClass('hover');
+    }
+  });
+
   var link = document.location.href;
   $.ajax({
     method: 'POST',

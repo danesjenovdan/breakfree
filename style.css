@@ -228,8 +228,9 @@ small {
   font-weight: 700;
 }
 
-.demands .demand__text:hover + .demand__hover,
-.demands .demand__hover:hover {
+.demands .demand .demand__text:hover + .demand__hover,
+.demands .demand .demand__hover:hover,
+.demands .demand.hover .demand__hover {
   display: none;
 }
 
