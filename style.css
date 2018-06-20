@@ -14,7 +14,7 @@ p {
 }
 
 .text-pink {
-  color: #fe8182;
+  color: #fe8182 !important;
 }
 
 a,
