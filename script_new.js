@@ -140,6 +140,12 @@ $(function ready() {
     $('html, body').css('overflow-y', 'hidden');
   });
 
+  var sdsResponse = [
+    "&raquo;Evropski poslanci iz vrst SDS menimo, da je nova direktiva o avtorskih pravicah potrebna, saj je trenutno v uporabi tista iz leta 2000, od takrat pa se je področje internetnih storitev močno razvilo. Avtorji si vsekakor zaslužijo pravično plačilo za svoje delo in tisti, ki zagovarjajo dejstvo, da je avtorstvo na internetu lastnina vsakega izmed nas, postavljajo avtorje v ničvreden položaj. Po tej logiki bi morale biti tudi knjige in časopisi zastonj. V SDS se zavzemamo za spoštovanje lastnine, torej tudi spoštovanje avtorskih pravic.",
+    "Kljub temu menimo, da je postopek, o katerem bomo odločali v četrtek, preuranjen, saj temelji na tem, da se zaradi zaključka mandata vsem mudi. Menimo, da si tako pomembna direktiva pred začetkom pogajanj zasluži širšo razpravo tudi izven odbora JURI, ki je mimogrede najmanjši odbor v Evropskem parlamentu in šteje le 20 članov. Ob dejstvu, da podpora direktivi tudi  v odboru ni bila enotna in da je večina političnih skupin razdeljena v svojem mnenju, ni potrebe po hitenju. Želimo si, da bi glasovali o usklajenem predlogu, ki bi ga podpirala velika večina poslancev in ki bi ga pred glasovanjem usvojila tudi slovenska in evropska javnost.",
+    "Naj opozorimo, da je bilo velikokrat v medijih predstavljeno napačno dejstvo, da bo Evropski parlament ta teden glasoval o zakonodaji, kar ne drži. V četrtek bomo glasovali le o podelitvi mandata za začetek pogajanj – trialog z Evropsko komisijo in Svetom EU. Evropski poslanci iz SDS bomo pri glasovanju upoštevali pozive mnogih strokovnjakov in avtentične prošnje zaskrbljenih slovenskih državljanov, tudi iz sfere gospodarstva in medijev in v tej fazi podelitve mandata ne bomo podprli.&laquo;"
+  ];
+
   var modalData = {
     'romana-tomc': {
       emails: 'romana.tomc-office@ep.europa.eu, romana.tomc@ep.europa.eu, maja.mikanec@ep.europa.eu, marta.osojnik@ep.europa.eu, andreja.pintar@ep.europa.eu',
@@ -148,6 +154,7 @@ $(function ready() {
         Bruselj:    '+32 (0)2 28 45 665',
         Strasbourg: '+33 (0)3 88 1 75 665',
       },
+      response: sdsResponse,
     },
     'milan-zver': {
       emails: 'milan.zver@europarl.europa.eu, polona.kek@europarl.europa.eu, peter.suhel@europarl.europa.eu',
@@ -156,6 +163,7 @@ $(function ready() {
         Bruselj:    '+32 (0)2 28 45 315',
         Strasbourg: '+32 (0)2 28 37 315',
       },
+      response: sdsResponse,
     },
     'ivo-vajgl': {
       emails: 'ivo.vajgl@europarl.europa.eu, antonino.arlacchi@europarl.europa.eu, damjan.stanonik@europarl.europa.eu, zrinka.mozara@europarl.europa.eu, vajgl.pisarna@gmail.com, tadeja.kuhar@ivovajgl.eu',
@@ -174,6 +182,7 @@ $(function ready() {
         Slovenija: '+386 (0)40 829 854',
         Bruselj:   '+32 (0)2 28 45 470',
       },
+      response: sdsResponse,
     },
     'alojz-peterle': {
       emails: 'alojz.peterle@europarl.europa.eu, andrej.cernigoj@peterle.eu, blaz.karlin@europarl.europa.eu, marta.osojnik@ep.europa.eu',
