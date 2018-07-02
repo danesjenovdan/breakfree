@@ -102,6 +102,7 @@ small {
 
   .landing .landing__title {
     font-size: 68px;
+    text-align: center;
   }
 
   .landing .landing__subtitle {
@@ -716,6 +717,13 @@ small {
   text-decoration: none;
 }
 
+.footer .source-row {
+  line-height: 1.4;
+  text-align: left;
+  position: relative;
+  top: -10px;
+}
+
 @media screen and (max-width: 480px) {
   .footer {
     text-align: center;
@@ -726,7 +734,8 @@ small {
     display: block;
   }
 
-  .footer__people {
+  .footer__people,
+  .footer .source-row {
     text-align: center;
   }
 }
