@@ -50,11 +50,11 @@ $(function ready() {
       name: $('#petition-name').val(),
       email: $('#petition-email').val(),
       peticija: petitionName + '.djnd=' + $('#petition-djnd')[0].checked + '.savethelink=' + $('#petition-savethelink')[0].checked,
-      subject,
-      content,
+      // subject,
+      // content,
     };
 
-    $.post('https://api.djnd.si/sign-mail/', data, function(res) {
+    $.get('https://api.djnd.si/sign/', data, function(res) {
         if (res === 'Saved') {
           $('.js-petition-error').text('');
           $('.petition__form').hide();
@@ -105,7 +105,7 @@ $(function ready() {
     },
   });
 
-  var title = 'Copyright, Copyleft, Copywrong';
+  var title = 'Rešimo internet';
   var text = 'Podpiši peticijo in od evropskih poslank/-cev zahtevaj, da glasujejo proti reformi avtorskega prava ter zaščitijo tvoje internetno življenje!';
   var hashtags = '#copyleft';
   //social
@@ -232,13 +232,23 @@ $(function ready() {
     "Spoštovani poslanec oz. poslanka Evropskega parlamenta!",
     "Kot veste, boste v prihodnjih dneh v Evropskem parlamentu glasovali o predlogu reforme avtorskega prava, ki ga je sprejel odbor JURI.",
     "Pišem vam, ker ne vem, kako boste o spornem predlogu glasovali, ali pa ste izrazili namero, da predlog podprete. Edina možnost zaščite interesov državljanov EU je v rokah Evropskega parlamenta, torej tudi v vaših rokah.",
-    "Tako strokovna javnost kot splošna javnost napovedano cenzuro interneta, zapakirano v reformo avtorskega prava, ostro obsojata. V primeru, da se glede predlogu ne znate opredeliti zaradi pomanjkanja informacij, vam pošiljam nekaj uporabnih povezav, kjer se lahko informirate o tem, zakaj je nesprejemljiv: [LINK1], [LINK2], [LINK3].",
+    "Tako strokovna javnost kot splošna javnost napovedano cenzuro interneta, zapakirano v reformo avtorskega prava, ostro obsojata. V primeru, da se glede predloga ne znate opredeliti zaradi pomanjkanja informacij, vam pošiljam nekaj uporabnih povezav, kjer se lahko informirate o tem, zakaj je nesprejemljiv: https://djnd.si/bqib, https://djnd.si/mzh, https://djnd.si/mzm, https://djnd.si/bqic.",
     "V vsakem primeru pa od vas zahtevam, da ravnate v interesu tistih, ki smo vam podelili mandat, ne pa v interesu tiste peščice (založnikov in zabavne industrije), ki bo od napovedanih sprememb mastno zaslužila, in torej glasujete PROTI.",
     "Hvala za razumevanje in lep pozdrav,",
     "[IME IN PRIIMEK]",
   ].join('\n\n');
 
   $('.js-copy-text').val(copyText);
+
+  var callText = [
+    "Živjo,",
+    "tukaj [IME IN PRIIMEK]. Kličem vas zaradi prihajajočega glasovanja o predlogu reforme avtorskega prava, ki ga je sprejel odbor JURI.",
+    "Zanima me, kako boste o spornem predlogu glasovali. Edina možnost zaščite interesov državljanov EU je v rokah Evropskega parlamenta, torej tudi v vaših rokah.",
+    "Tako strokovna javnost kot splošna javnost napovedano cenzuro interneta, zapakirano v reformo avtorskega prava, ostro obsojata.",
+    "Od vas zahtevam, da ravnate v interesu tistih, ki smo vam podelili mandat, ne pa v interesu tiste peščice (založnikov in zabavne industrije), ki bo od napovedanih sprememb mastno zaslužila, in torej glasujete PROTI."
+  ].join('\n\n');
+
+  $('.js-call-text').val(callText);
 
   $('.js-email-button').on('click', function() {
     var $panel = $(this).closest('.panel');
@@ -248,7 +258,7 @@ $(function ready() {
     $modal.find('.modal-header h3').text($panel.find('h3').text());
     $modal.find('.modal-header h4').text($panel.find('h4').text());
 
-    $modal.find('.js-copy-emails').val(modalData[id].emails);
+    $modal.find('.js-copy-emails').val(modalData[id].emails + ', copyleft@danesjenovdan.si');
 
     $modal.modal('show');
   });
