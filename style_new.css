@@ -467,13 +467,17 @@ small {
 .poslanci .btn-default:active,
 .poslanci .btn-default:focus,
 .poslanci .btn-default[disabled] {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
 }
 
-.poslanci .panel,
 .poslanci .thumbnail {
+  border: 0;
+}
+
+.poslanci .panel {
   border-radius: 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1)
 }
 
 .poslanci .panel-heading {
@@ -482,6 +486,11 @@ small {
 
 .poslanci .panel-heading h3 {
   margin-top: 10px;
+}
+
+.modal h4.modal-title,
+.poslanci .panel-heading h4 {
+  font-weight: 300;
 }
 
 .poslanci .caption {
@@ -783,11 +792,33 @@ small {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .modal .modal-dialog {
+    width: 760px;
+  }
+}
+
 .modal .modal-content {
   border-radius: 0;
+  border: 0;
 }
 
 .modal textarea {
   border-radius: 0;
   resize: vertical;
+}
+
+.modal .modal-body p,
+.modal .modal-body div {
+  font-size: 16px;
+}
+
+.modal .modal-body > div {
+  margin-bottom: 5px;
+}
+
+.modal .modal-header .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }

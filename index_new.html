@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=latin-ext">
-  <link rel="stylesheet" href="style_new.css?v2">
+  <link rel="stylesheet" href="style_new.css?v3">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="col-md-8 col-md-flex">
-          <h1 class="landing__title text-blue text-center">
+          <h1 class="landing__title text-blue">
             Evropski parlament skuša cenzurirati internet!
           </h1>
         </div>
@@ -229,18 +229,18 @@
               </div>
               <div class="caption text-right">
                 <div class="reaction-image">
-                  <img src="reactions/proti.jpg" alt="reaction image" class="img-responsive">
+                  <img src="reactions/neodlocen.jpg" alt="reaction image" class="img-responsive">
                 </div>
                 <p class="lead">
                   Namera glasovanja:<br>
-                  <strong>PROTI</strong>
+                  <strong>NEODLOČENA</strong>
                 </p>
                 <p>
                   <a href="javascript:;" class="js-response-button">Preberi odziv</a>
                 </p>
                 <div>
-                  <a href="javascript:;" class="btn btn-default btn-block" disabled style="opacity: 0; pointer-events: none;">&nbsp;</a>
-                  <a href="javascript:;" class="btn btn-default btn-block" disabled style="opacity: 0; pointer-events: none;">&nbsp;</a>
+                  <a href="javascript:;" class="btn btn-default btn-block js-email-button" role="button">Pošlji e-pošto</a>
+                  <a href="javascript:;" class="btn btn-default btn-block js-call-button" role="button">Pokliči</a>
                 </div>
               </div>
             </div>
@@ -531,15 +531,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title">Name</h3>
-          <h4 class="modal-title">Party</h4>
+          <h3 class="modal-title text-center">Name</h3>
+          <h4 class="modal-title text-center">Party</h4>
         </div>
         <div class="modal-body">
-          <p>Kopiraj besedilo:</p>
+          <div>Kopiraj besedilo:</div>
           <p>
             <textarea rows="15" class="form-control js-copy-text" readonly></textarea>
           </p>
-          <p>Kopiraj e-naslove:</p>
+          <div>Kopiraj e-naslove:</div>
           <p>
             <textarea rows="5" class="form-control js-copy-emails" readonly></textarea>
           </p>
@@ -557,12 +557,12 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title">Name</h3>
-          <h4 class="modal-title">Party</h4>
+          <h3 class="modal-title text-center">Name</h3>
+          <h4 class="modal-title text-center">Party</h4>
         </div>
         <div class="modal-body">
           <div class="js-phone-container"></div>
-          <p>Primer besedila, ki ga lahko poveš:</p>
+          <div>Primer besedila, ki ga lahko poveš:</div>
           <p>
             <textarea rows="15" class="form-control js-copy-text" readonly></textarea>
           </p>
@@ -576,11 +576,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="modal-title">Name</h3>
-          <h4 class="modal-title">Party</h4>
+          <h3 class="modal-title text-center">Name</h3>
+          <h4 class="modal-title text-center">Party</h4>
         </div>
         <div class="modal-body">
-          <p class="js-response-text"></p>
+          <div class="js-response-text"></div>
         </div>
       </div>
     </div>
@@ -588,7 +588,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="script_new.js?v2"></script>
+  <script src="script_new.js?v3"></script>
 </body>
 
 </html>
