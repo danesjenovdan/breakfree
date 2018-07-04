@@ -203,9 +203,8 @@ $(function ready() {
         Strasbourg: '+33 (0)3 88 1 75 493',
       },
       response: [
-        "&raquo;V Evropskem parlamentu je danes o tem dosjeju glasoval odbor IURI, ki je predlog direktive sprejel, kar pa seveda ne pomeni, da je direktiva izglasovana. Nasprotno – pot do sprejetja bo še zelo dolga. Z današnjim glasovanjem je odbor zgolj podelil mandat Evropskemu parlamentu za pogajanja v trialogu Evropska komisija – države članice – Evropski parlament.",
-        "Dejstvo je, da zaradi razvoja digitalnih tehnologij potrebujemo nove mehanizme, s katerimi bomo zaščitili avtorske pravice, vendar pa ta zaščita ne sme prizadeti manjših na račun večjih. Do sedaj sem prisluhnila argumentiranim mnenjem obeh strani, avtorjev in uporabnikov. Po tehtnem razmisleku ugotavljam, da je v tem trenutku med predlogi v direktivi še veliko nedorečenosti in nesorazmerij.",
-        "Vsekakor pa moramo počakati na nadaljnji razvoj dogodkov in spremembe besedila, ki bodo nedvomno sledile. Šele ko bo na mizi končno besedilo, o katerem bomo glasovali kot plenum, bom lahko sprejela tudi odločitev o svoji (ne)podpori direktivi. Ne pričakujem pa, da bi se to zgodilo še v tem sklicu parlamenta.&laquo;",
+        "&raquo;Skoraj 750 tisoč ljudi po vsej Evropi nas prosi v @EP_Slovenija, da zavarujemo že uveljavljene svoboščine interneta #SaveYourInternet in vnovič preučimo člena #Article11 in #Article13. Z odgovornostjo sprejemam poziv: Z vami delim iste skrbi. #EPlenary&laquo;",
+        '<br><a href="https://twitter.com/tfajon/status/1014439422601900034">Povezava do tvita</a>',
       ],
     },
     'igor-soltes': {
