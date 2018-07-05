@@ -173,7 +173,10 @@ $(function ready() {
         Bruselj:    '+32 (0)2 28 37 620',
       },
       response: [
-        "&raquo;V skoraj desetih letih, odkar sem v EP,  ne pomnim, da bi imeli v skupini ALDE tako zelo polarizajočo temo in glasovanje. Zaenkrat nisem še izoblikoval svojega stališča o obeh najbolj spornih členih, ki ju omenjate. Kadar ne vem, kako, in ne poznam dovolj problematike, ker se z njo ne ukvarjam, moram ali slediti večini v svoji skupini ali lastni intuiciji, lahko pa se pri glasovanju vzdržim. Lep pozdrav, I. Vajgl&laquo;",
+        "&raquo;Danes sem na zasedanju Evropskega parlamenta glasoval PROTI predlogu pristojnega odbora Evropskega parlamenta za pravne zadeve (JURI), da se prične postopek tristranskih pogajanj o predlogu direktive o avtorskih pravicah na enotnem digitalnem trgu (med Evropsko komisijo, Svetom EU in EP).",
+        "S tem želim prispevati, da se odločanje prestavi na jesen in tako omogoči več časa za mirno, argumentirano in poglobljeno razpravo. Burni odzivi v zadnjih dneh kažejo, da te ni bilo dovolj, ali pa tema ni bila dovolj znana širši javnosti.",
+        "Okoli te direktive so se očitno angažirali vsi resursi velikega kapitala na čelu z Googlom in drugimi spletnimi velikani, dobil sem tudi mnoge odzive umetnikov in drugih ustvarjalcev – avtorjev, ki z močnimi argumenti podpirajo sprejetje direktive. Množično so se odzvali tudi tisti, ki iskreno verjamejo, da poznajo najboljšo rešitev.",
+        "Prepričan sem, da je po osemnajstih letih čas, da prenovimo pravni sistem zaščite avtorskih pravic, nikakor pa se to ne sme zgoditi na račun svobode interneta. Tako kot v primeru sporazuma ACTA, ki sem mu od vsega začetka nasprotoval, sem tudi v tem primeru po načelu previdnosti za to, da vse strani še enkrat soočijo argumente in poiščejo ustrezne rešitve, ki bodo omogočile, da bo ‘volk sit in koza cela’ oziroma sprejetje direktive o avtorskih pravicah, ki ne bo posegala v svobodo interneta, in da gospodarji interneta ne bodo posegali v naša življenja.&laquo;",
       ],
     },
     'patricija-sulin': {
