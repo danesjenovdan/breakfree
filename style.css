@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&subset=latin-ext');
 
 @font-face {
   font-family: 'GraphCondensedWeb';
@@ -1047,4 +1047,23 @@ small {
 .progress__arrow--10k {
   width: 66.66%;
   margin-top: -25px;
+}
+
+.gray-response-block {
+  background-color: #e5e5e5;
+  margin-top: 40px;
+  padding: 30px;
+  font-weight: 500;
+}
+
+.gray-response-block .lead {
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.gray-response-block a,
+.gray-response-block a:visited,
+.gray-response-block a:active,
+.gray-response-block a:focus {
+  text-decoration: underline;
 }
