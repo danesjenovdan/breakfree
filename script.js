@@ -46,7 +46,7 @@ $(function ready() {
     // var count = parseInt(res, 10);
     // var all = r.names;
     $('.js-signaturenames').text('Peticijo je podpisalo 13410 podpisnic in podpisnikov. Njihova imena smo odstranili, ko je vstopila v veljavo GDPR.')
-    var count = 13410;
+    var count = 13731;
     if (!isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
       $('.js-signaturecount').text(count);
