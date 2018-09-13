@@ -502,7 +502,7 @@ small {
 .poslanci .reaction-image {
   position: absolute;
   left: 0;
-  top: 32px;
+  /* top: 32px; */
   width: 60px;
   z-index: -1;
 }
