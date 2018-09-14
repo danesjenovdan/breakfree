@@ -98,9 +98,9 @@ $(function ready() {
     },
   });
 
-  var title = '{{title}}';
-  var text = '{{social text}}';
-  var hashtags = '#{{hashtag}}';
+  var title = 'Marjan, to ni hec!';
+  var text = 'S podpisom peticije proti imenovanju promotorja kulture strahu Damirja Črnčeca za državnega sekretarja pokaži Šarcu rdeči karton!';
+  var hashtags = '#daJmir';
   //social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
