@@ -1,10 +1,5 @@
 $(function ready() {
-  var petitionName = 'copyleft';
-  var subject = 'Fix copyright before it is too late / Popravimo avtorsko pravo, preden bo prepozno';
-  var content = '';
-  $.get('./mail.html', function(res) {
-    content = res;
-  });
+  var petitionName = 'dajmir';
 
   function showAllSignatures() {
     $('.js-more').remove();
@@ -49,12 +44,10 @@ $(function ready() {
     var data = {
       name: $('#petition-name').val(),
       email: $('#petition-email').val(),
-      peticija: petitionName + '.djnd=' + $('#petition-djnd')[0].checked + '.savethelink=' + $('#petition-savethelink')[0].checked,
-      subject,
-      content,
+      peticija: petitionName + '.djnd=' + $('#petition-djnd')[0].checked
     };
 
-    $.post('https://api.djnd.si/sign-mail/', data, function(res) {
+    $.get('https://api.djnd.si/sign/', data, function(res) {
         if (res === 'Saved') {
           $('.js-petition-error').text('');
           $('.petition__form').hide();
@@ -73,7 +66,7 @@ $(function ready() {
 
     $('#petition-name').val('');
     $('#petition-email').val('');
-    $('#petition-savethelink, #petition-djnd').each(function() {
+    $('#petition-djnd').each(function() {
       this.checked = this.defaultChecked;
     });
 
@@ -105,9 +98,9 @@ $(function ready() {
     },
   });
 
-  var title = 'Copyright, Copyleft, Copywrong';
-  var text = 'Podpiši peticijo in od evropskih poslank/-cev zahtevaj, da glasujejo proti reformi avtorskega prava ter zaščitijo tvoje internetno življenje!';
-  var hashtags = '#copyleft';
+  var title = '{{title}}';
+  var text = '{{social text}}';
+  var hashtags = '#{{hashtag}}';
   //social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
