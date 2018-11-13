@@ -99,7 +99,7 @@ $(function ready() {
   // });
   var link = 'https://voli.kjerkoli.si/zahtevaj'
 
-  var title = 'Marjan, to ni hec!';
+  var title = 'Zakaj se mladi ne udeležujejo lokalnih volitev?';
   var text = 'V nedeljo me ne bo doma, zato ne morem voliti. Spremenimo Zakon o lokalnih volitvah, ki omejuje uveljavljanje volilne pravice!';
   var hashtags = '#LokalneVolitve';
   //social
