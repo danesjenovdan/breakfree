@@ -104,7 +104,7 @@ $(function ready() {
   var hashtags = '#LokalneVolitve';
   //social
   $('.js-facebook').on('click', function() {
-    var url = 'https://www.facebook.com/dialog/feed?app_id=294616548054883&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
+    var url = 'https://www.facebook.com/dialog/feed?app_id=294616548054883&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(link) + '&ref=responsive&name=' + encodeURIComponent(title);
     window.open(url, '_blank');
     return false;
   });
@@ -114,12 +114,12 @@ $(function ready() {
     return false;
   });
   $('.js-gplus').on('click', function() {
-    var url = 'https://plus.google.com/share?url=' + encodeURIComponent(document.location.href);
+    var url = 'https://plus.google.com/share?url=' + encodeURIComponent(link);
     window.open(url, '_blank');
     return false;
   });
   $('.js-email').on('click', function() {
-    var url = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + text + ' ' + encodeURIComponent(document.location.href);
+    var url = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + text + ' ' + encodeURIComponent(link);
     window.open(url, '_blank');
     return false;
   });
