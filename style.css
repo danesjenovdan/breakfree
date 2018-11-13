@@ -94,6 +94,8 @@ small {
 h2.landing__subtitle {
   font-size: 38px;
   font-weight: 500;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 hr.divider {

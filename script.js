@@ -8,21 +8,21 @@ $(function ready() {
 
   $('.js-more').on('click', showAllSignatures);
 
-  $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
-    var $sigNames = $('.js-signaturenames');
-    $sigNames.text(res.names);
-    if (parseInt($sigNames.css('max-height'), 10) > $sigNames.height()) {
-      showAllSignatures();
-    }
-    var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
-    var count = res.counter;
-    if (typeof count === 'number' && !isNaN(count)) {
-      var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
-      $('.js-signaturecount').text(count);
-      $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
-      $('.petition .progress-bar span').text(percent + '%');
-    }
-  });
+  // $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
+  //   var $sigNames = $('.js-signaturenames');
+  //   $sigNames.text(res.names);
+  //   if (parseInt($sigNames.css('max-height'), 10) > $sigNames.height()) {
+  //     showAllSignatures();
+  //   }
+  //   var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
+  //   var count = res.counter;
+  //   if (typeof count === 'number' && !isNaN(count)) {
+  //     var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
+  //     $('.js-signaturecount').text(count);
+  //     $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
+  //     $('.petition .progress-bar span').text(percent + '%');
+  //   }
+  // });
 
   $('.petition__form').on('submit', function(event) {
     event.preventDefault();
