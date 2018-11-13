@@ -86,24 +86,25 @@ $(function ready() {
     }
   });
 
-  var link = document.location.href;
-  $.ajax({
-    method: 'POST',
-    url: 'https://djnd.si/yomamasofat/',
-    data: {
-      fatmama: document.location.href,
-    },
-    success: function(resp) {
-      link = resp;
-    },
-  });
+  // var link = document.location.href;
+  // $.ajax({
+  //   method: 'POST',
+  //   url: 'https://djnd.si/yomamasofat/',
+  //   data: {
+  //     fatmama: document.location.href,
+  //   },
+  //   success: function(resp) {
+  //     link = resp;
+  //   },
+  // });
+  var link = 'https://voli.kjerkoli.si/zahtevaj'
 
   var title = 'Marjan, to ni hec!';
-  var text = 'S podpisom peticije proti imenovanju promotorja kulture strahu Damirja Črnčeca za državnega sekretarja pokaži Šarcu rdeči karton!';
-  var hashtags = '#daJmir';
+  var text = 'V nedeljo me ne bo doma, zato ne morem voliti. Spremenimo Zakon o lokalnih volitvah, ki omejuje uveljavljanje volilne pravice!';
+  var hashtags = '#LokalneVolitve';
   //social
   $('.js-facebook').on('click', function() {
-    var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
+    var url = 'https://www.facebook.com/dialog/feed?app_id=294616548054883&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
     window.open(url, '_blank');
     return false;
   });

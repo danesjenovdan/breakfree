@@ -7,16 +7,19 @@ body,
 p {
   font-family: 'Source Sans Pro', sans-serif;
   color: #000;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .text-red {
-  color: #d94200;
+  color: #6ba8a0;
 }
 
 a,
 .btn-link {
-  color: #d94200;
+  color: #6ba8a0;
   text-decoration: none;
+  font-weight: 700;
 }
 
 a:hover,
@@ -25,7 +28,7 @@ a:active,
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #d94200;
+  color: #6ba8a0;
   text-decoration: underline;
 }
 
@@ -63,14 +66,11 @@ small {
 .petition {
   position: relative;
   margin-bottom: 20px;
-}
-
-.petition {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .landing {
-  margin: 80px 0;
+  margin: 30px 0;
 }
 
 .landing h1.landing__title {
@@ -82,6 +82,7 @@ small {
   font-size: 52px;
   font-weight: 900;
   margin: 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 480px) {
@@ -96,10 +97,13 @@ h2.landing__subtitle {
 }
 
 hr.divider {
-  border-top-color: #d94200;
+  border-top-color: #6ba8a0;
   border-top-width: 8px;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+.divider.blank {
+  border:  none;
 }
 
 /* .landing .landing__subtitle {
@@ -151,11 +155,11 @@ hr.divider {
   font-weight: 300;
   vertical-align: text-top;
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 0;
 }
 
 .petition .petition__title--box {
-  background-color: #d94200;
+  background-color: #6ba8a0;
   color: #fff;
   font-weight: 400;
   padding: 100px 50px;
@@ -189,7 +193,7 @@ hr.divider {
 }
 
 .petition .progress-bar {
-  background-color: #d94200;
+  background-color: #6ba8a0;
 }
 
 .petition .progress__note {
@@ -207,7 +211,7 @@ hr.divider {
   margin-bottom: 20px;
   font-size: 15px;
   padding: 0 15px;
-  color: #d94200;
+  color: #6ba8a0;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -228,7 +232,7 @@ hr.divider {
   font-size: 36px;
   font-weight: 900;
   line-height: 76px;
-  background-color: #d94200;
+  background-color: #6ba8a0;
   color: #000;
   border: 0;
   border-radius: 0;
@@ -389,7 +393,7 @@ hr.divider {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #d94200;
+  color: #6ba8a0;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -426,7 +430,7 @@ hr.divider {
 }
 
 .petition__reset .social-box {
-  background-color: #d94200;
+  background-color: #6ba8a0;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -478,7 +482,7 @@ hr.divider {
 }
 
 .btn-social:hover svg {
-  fill: #d94200;
+  fill: #6ba8a0;
 }
 
 .footer .source-row {
@@ -568,7 +572,13 @@ hr.divider {
 }
 
 .img-tweet {
-  border: 3px solid #d94200;
+  border: 3px solid #6ba8a0;
   margin-bottom: 30px;
   width: 100%;
+}
+
+
+.cta {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
