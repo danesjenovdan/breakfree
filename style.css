@@ -228,7 +228,7 @@ hr.divider {
   font-weight: 900;
   line-height: 76px;
   background-color: #20a048;
-  color: #000;
+  color: #fff;
   border: 0;
   border-radius: 0;
   text-transform: uppercase;
@@ -244,7 +244,7 @@ hr.divider {
 .petition .btn-default:not([disabled]):hover,
 .petition .btn-default:not([disabled]):active:hover,
 .petition .btn-default:not([disabled]):focus:hover {
-  color: #fff;
+  color: #000;
 }
 
 .modal .btn-default,

@@ -86,9 +86,9 @@ $(function ready() {
     },
   });
 
-  var title = 'TODO SOCIAL TITLE';
-  var text = 'TODO SOCIAL TEXT';
-  var hashtags = '#NeDamoNarave';
+  var title = 'Ustavimo razprodajo slovenske narave!';
+  var text = 'Podpišite peticijo in pomagajte ustaviti razprodajo naše narave in prihodnosti.';
+  var hashtags = '#naravenedamo';
   // social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
@@ -105,4 +105,11 @@ $(function ready() {
     window.open(url, '_blank');
     return false;
   });
+
+  $('#btn-scroll').on('click', function() {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".petition__form").offset().top
+  }, 2000);
+  });
+
 });
