@@ -91,7 +91,7 @@ $(function ready() {
   var hashtags = '#naravenedamo';
   // social
   $('.js-facebook').on('click', function() {
-    var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
+    var url = 'https://www.facebook.com/dialog/feed?app_id=247501873333164&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
     window.open(url, '_blank');
     return false;
   });
