@@ -1,5 +1,5 @@
 $(function ready() {
-  var petitionName = 'dajmir';
+  var petitionName = 'nedamonarave';
 
   function showAllSignatures() {
     $('.js-more').remove();
@@ -44,7 +44,7 @@ $(function ready() {
     var data = {
       name: $('#petition-name').val(),
       email: $('#petition-email').val(),
-      peticija: petitionName + '.djnd=' + $('#petition-djnd')[0].checked
+      peticija: petitionName + '.consent=' + $('#petition-consent')[0].checked
     };
 
     $.get('https://api.djnd.si/sign/', data, function(res) {
@@ -66,24 +66,12 @@ $(function ready() {
 
     $('#petition-name').val('');
     $('#petition-email').val('');
-    $('#petition-djnd').each(function() {
+    $('#petition-consent').each(function() {
       this.checked = this.defaultChecked;
     });
 
     $('.petition__form').show();
     $('.petition__reset').hide();
-  });
-
-  // hover state on ios
-  $(document).on('touchstart', function(event) {
-    const $hover = $(event.target).closest('.demand__hover, .demand__text');
-    const $demands = $('.demand');
-    if ($hover.length) {
-      $demands.removeClass('hover');
-      $hover.closest('.demand').addClass('hover');
-    } else {
-      $demands.removeClass('hover');
-    }
   });
 
   var link = document.location.href;
@@ -98,10 +86,10 @@ $(function ready() {
     },
   });
 
-  var title = 'Marjan, to ni hec!';
-  var text = 'S podpisom peticije proti imenovanju promotorja kulture strahu Damirja Črnčeca za državnega sekretarja pokaži Šarcu rdeči karton!';
-  var hashtags = '#daJmir';
-  //social
+  var title = 'TODO SOCIAL TITLE';
+  var text = 'TODO SOCIAL TEXT';
+  var hashtags = '#NeDamoNarave';
+  // social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
     window.open(url, '_blank');
@@ -109,11 +97,6 @@ $(function ready() {
   });
   $('.js-twitter').on('click', function() {
     var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + link);
-    window.open(url, '_blank');
-    return false;
-  });
-  $('.js-gplus').on('click', function() {
-    var url = 'https://plus.google.com/share?url=' + encodeURIComponent(document.location.href);
     window.open(url, '_blank');
     return false;
   });

@@ -10,12 +10,12 @@ p {
 }
 
 .text-red {
-  color: #d94200;
+  color: #20a048;
 }
 
 a,
 .btn-link {
-  color: #d94200;
+  color: #20a048;
   text-decoration: none;
 }
 
@@ -25,7 +25,7 @@ a:active,
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #d94200;
+  color: #20a048;
   text-decoration: underline;
 }
 
@@ -59,7 +59,6 @@ small {
 }
 
 .landing,
-.demands,
 .petition {
   position: relative;
   margin-bottom: 20px;
@@ -96,7 +95,7 @@ h2.landing__subtitle {
 }
 
 hr.divider {
-  border-top-color: #d94200;
+  border-top-color: #20a048;
   border-top-width: 8px;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -151,11 +150,11 @@ hr.divider {
   font-weight: 300;
   vertical-align: text-top;
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 0;
 }
 
 .petition .petition__title--box {
-  background-color: #d94200;
+  background-color: #20a048;
   color: #fff;
   font-weight: 400;
   padding: 100px 50px;
@@ -170,7 +169,7 @@ hr.divider {
 }
 
 .petition .petition__title strong {
-  font-size: 64px;
+  /* font-size: 64px; */
 }
 
 .petition .petition__title span {
@@ -178,18 +177,18 @@ hr.divider {
 }
 
 .petition .progress-container {
-  padding-bottom: 140px;
+  padding-bottom: 40px;
 }
 
 .petition .progress {
   height: 35px;
-  background-color: #dae6f2;
+  background-color: rgba(32, 160, 72, 0.25);
   border-radius: 0;
   margin-bottom: 10px;
 }
 
 .petition .progress-bar {
-  background-color: #d94200;
+  background-color: #20a048;
 }
 
 .petition .progress__note {
@@ -207,7 +206,7 @@ hr.divider {
   margin-bottom: 20px;
   font-size: 15px;
   padding: 0 15px;
-  color: #d94200;
+  color: #20a048;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -228,7 +227,7 @@ hr.divider {
   font-size: 36px;
   font-weight: 900;
   line-height: 76px;
-  background-color: #d94200;
+  background-color: #20a048;
   color: #000;
   border: 0;
   border-radius: 0;
@@ -325,7 +324,7 @@ hr.divider {
   }
 
   .petition .petition__title strong {
-    font-size: 42px;
+    /* font-size: 42px; */
   }
 
   .petition .petition__note {
@@ -389,7 +388,7 @@ hr.divider {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #d94200;
+  color: #20a048;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -426,7 +425,7 @@ hr.divider {
 }
 
 .petition__reset .social-box {
-  background-color: #d94200;
+  background-color: #20a048;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -478,7 +477,7 @@ hr.divider {
 }
 
 .btn-social:hover svg {
-  fill: #d94200;
+  fill: #20a048;
 }
 
 .footer .source-row {
@@ -508,7 +507,7 @@ hr.divider {
 /* MUKI */
 
 .signatures {
-  background-color: rgb(248, 217, 207);
+  background-color: rgba(32, 160, 72, 0.25);
   padding: 30px;
   margin-bottom: 50px;
   font-size: 16px;
@@ -523,11 +522,7 @@ hr.divider {
 .signature-names.show-less::after {
   content: ' ';
   display: table;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgb(248, 217, 207)));
-  background-image: -webkit-linear-gradient(top, transparent, rgb(248, 217, 207));
-  background-image: -moz-linear-gradient(top, transparent, rgb(248, 217, 207));
-  background-image: linear-gradient(to bottom, transparent, rgb(248, 217, 207));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#03f0f5fa', endColorstr='#f0f5fa', GradientType=0);
+  background-image: linear-gradient(to bottom, transparent, rgba(32, 160, 72, 0.25));
   width: 100%;
   height: 45px;
   position: absolute;
@@ -546,7 +541,7 @@ hr.divider {
   font-size: 36px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 480px) {
@@ -563,12 +558,12 @@ hr.divider {
   }
 
   .signatures__title {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 
 .img-tweet {
-  border: 3px solid #d94200;
+  border: 3px solid #20a048;
   margin-bottom: 30px;
   width: 100%;
 }
