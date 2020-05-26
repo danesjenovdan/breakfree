@@ -10,7 +10,10 @@ $(function ready() {
 
   $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
     var $sigNames = $('.js-signaturenames');
-    $sigNames.text('... ' + (res.names || '').slice(-5000));
+    // $sigNames.text('... ' + (res.names || '').slice(-5000));
+    res.names.split(', ').forEach(function(name) {
+      $sigNames.append(name + ', ');
+    });
     if (parseInt($sigNames.css('max-height'), 10) > $sigNames.height()) {
       showAllSignatures();
     }
