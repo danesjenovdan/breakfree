@@ -97,9 +97,9 @@ $(function ready() {
     },
   });
 
-  var title = 'TODO: social share title';
-  var text = 'TODO: social share text';
-  var hashtags = 'TODO: hashtags';
+  var title = 'Peticija proti uničevanju javnega visokega šolstva in znanosti';
+  var text = 'Podpri javno visoko šolstvo in znanost ter podpiši peticijo proti njuni razgradnji!';
+  var hashtags = '#akademskaskupnost';
   // social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=247501873333164&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
