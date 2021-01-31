@@ -207,6 +207,21 @@ hr.divider {
   font-weight: 700;
 }
 
+.petition .petition__text p {
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 300;
+  vertical-align: text-top;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 767px) {
+  .petition .petition__text p {
+    font-size: 18px;
+  }
+}
+
 .petition .progress-container {
   padding-bottom: 40px;
 }
