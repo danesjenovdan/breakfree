@@ -552,6 +552,13 @@ hr.divider {
   font-size: 16px;
 }
 
+.signatures p.signature-names {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
 .signature-names.show-less {
   max-height: 500px;
   overflow: hidden;
@@ -623,4 +630,32 @@ hr.divider {
   line-height: 1.4;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.btn-attachment {
+  background: rgba(231, 121, 61, 0.15);
+  display: inline-flex;
+  align-items: center;
+  max-width: 250px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-attachment .icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  margin-right: 1em;
+}
+
+.btn-attachment .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-attachment .text {
+  white-space: normal;
+  text-align: left;
 }
