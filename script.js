@@ -1,5 +1,5 @@
 $(function ready() {
-  var petitionName = 'nedamonarave';
+  var petitionName = 'univerzapetition';
   var allNames = '';
 
   var $sigNames = $('.js-signaturenames');
@@ -16,10 +16,6 @@ $(function ready() {
   $('.js-more').on('click', showAllSignatures);
 
   $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
-    // $sigNames.text('... ' + (res.names || '').slice(-5000));
-    //res.names.split(', ').forEach(function(name) {
-    //  $sigNames.append(name + ', ');
-    //});
     $sigNames.text((res.names || '').slice(0, 4000));
     allNames = res.names;
     if (parseInt($sigNames.css('max-height'), 10) > $sigNames.height()) {
@@ -120,7 +116,6 @@ $(function ready() {
   $('#btn-scroll').on('click', function() {
     $([document.documentElement, document.body]).animate({
       scrollTop: $(".petition__form").offset().top
-  }, 2000);
+    }, 2000);
   });
-
 });

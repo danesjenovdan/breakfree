@@ -10,12 +10,12 @@ p {
 }
 
 .text-red {
-  color: #20a048;
+  color: #db6161;
 }
 
 a,
 .btn-link {
-  color: #20a048;
+  color: #db6161;
   text-decoration: none;
 }
 
@@ -25,7 +25,7 @@ a:active,
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #20a048;
+  color: #db6161;
   text-decoration: underline;
 }
 
@@ -95,18 +95,11 @@ h2.landing__subtitle {
 }
 
 hr.divider {
-  border-top-color: #20a048;
+  border-top-color: #db6161;
   border-top-width: 8px;
   margin-top: 60px;
   margin-bottom: 60px;
 }
-
-/* .landing .landing__subtitle {
-  font-size: 48px;
-  line-height: 1.2;
-  font-weight: 300;
-  margin-top: 60px;
-} */
 
 @media screen and (max-width: 991px) {
   .landing {
@@ -154,7 +147,7 @@ hr.divider {
 }
 
 .petition .petition__title--box {
-  background-color: #20a048;
+  background-color: #db6161;
   color: #fff;
   font-weight: 400;
   padding: 100px 50px;
@@ -168,10 +161,6 @@ hr.divider {
   }
 }
 
-.petition .petition__title strong {
-  /* font-size: 64px; */
-}
-
 .petition .petition__title span {
   font-weight: 700;
 }
@@ -182,13 +171,13 @@ hr.divider {
 
 .petition .progress {
   height: 35px;
-  background-color: rgba(32, 160, 72, 0.25);
+  background-color: rgba(219, 97, 97, 0.15);
   border-radius: 0;
   margin-bottom: 10px;
 }
 
 .petition .progress-bar {
-  background-color: #20a048;
+  background-color: #db6161;
 }
 
 .petition .progress__note {
@@ -206,7 +195,7 @@ hr.divider {
   margin-bottom: 20px;
   font-size: 15px;
   padding: 0 15px;
-  color: #20a048;
+  color: #db6161;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -227,7 +216,7 @@ hr.divider {
   font-size: 36px;
   font-weight: 900;
   line-height: 76px;
-  background-color: #20a048;
+  background-color: #db6161;
   color: #fff;
   border: 0;
   border-radius: 0;
@@ -289,7 +278,6 @@ hr.divider {
 .poslanci .reaction-image {
   position: absolute;
   left: 0;
-  /* top: 32px; */
   width: 60px;
   z-index: -1;
 }
@@ -321,10 +309,6 @@ hr.divider {
   .petition .petition__title {
     font-size: 28px;
     display: block;
-  }
-
-  .petition .petition__title strong {
-    /* font-size: 42px; */
   }
 
   .petition .petition__note {
@@ -388,7 +372,7 @@ hr.divider {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #20a048;
+  color: #db6161;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -410,7 +394,6 @@ hr.divider {
   background-color: #eee;
 }
 
-/* .petition .petition__form { */
 .petition .petition__reset {
   display: none;
 }
@@ -425,7 +408,7 @@ hr.divider {
 }
 
 .petition__reset .social-box {
-  background-color: #20a048;
+  background-color: #db6161;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -477,7 +460,7 @@ hr.divider {
 }
 
 .btn-social:hover svg {
-  fill: #20a048;
+  fill: #db6161;
 }
 
 .footer .source-row {
@@ -507,7 +490,7 @@ hr.divider {
 /* MUKI */
 
 .signatures {
-  background-color: rgba(32, 160, 72, 0.25);
+  background-color: rgba(219, 97, 97, 0.15);
   padding: 30px;
   margin-bottom: 50px;
   font-size: 16px;
@@ -522,7 +505,7 @@ hr.divider {
 .signature-names.show-less::after {
   content: ' ';
   display: table;
-  background-image: linear-gradient(to bottom, transparent, rgba(32, 160, 72, 0.25));
+  background-image: linear-gradient(to bottom, transparent, rgba(219, 97, 97, 0.15));
   width: 100%;
   height: 45px;
   position: absolute;
@@ -563,7 +546,7 @@ hr.divider {
 }
 
 .img-tweet {
-  border: 3px solid #20a048;
+  border: 3px solid #db6161;
   margin-bottom: 30px;
   width: 100%;
 }
