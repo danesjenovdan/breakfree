@@ -6,8 +6,8 @@ $(function ready() {
 
   function showAllSignatures() {
     $sigNames.text('');
-    allNames.split(', ').forEach(function(name) {
-      $sigNames.append(name + ', ');
+    allNames.split(', ').forEach(function(name, i, arr) {
+      $sigNames.append(name + (i === arr.length - 1 ? '' : ', '));
     });
     $('.js-more').remove();
     $('.js-signaturenames').removeClass('show-less');
@@ -34,14 +34,18 @@ $(function ready() {
   $('.petition__form').on('submit', function(event) {
     event.preventDefault();
 
+    var emailVal = $.trim($('#petition-email').val() || '');
+    var nameVal = $.trim($('#petition-name').val() || '');
+    var orgVal = $.trim($('#petition-org').val() || '');
+
     var emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!$('#petition-email').val().match(emailPattern)) {
+    if (!emailVal.match(emailPattern)) {
       alert('Tvoj email ne izgleda kot email. Prosim poskusi ponovno.');
       return;
     }
 
     var namePattern = /^(([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+[\-\']?)*([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+)?\s)+([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+[\-\']?)*([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+)?$/;
-    if (!$('#petition-name').val().match(namePattern)) {
+    if (!nameVal.match(namePattern)) {
       alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
       return;
     }
@@ -49,8 +53,8 @@ $(function ready() {
     $(this).find(':input').attr('disabled', true);
 
     var data = {
-      name: $('#petition-name').val(),
-      email: $('#petition-email').val(),
+      name: nameVal + (orgVal ? ' (' + orgVal + ')' : ''),
+      email: emailVal,
       peticija: petitionName + '.consent=' + true
     };
 
@@ -72,6 +76,7 @@ $(function ready() {
     $('.petition__form').find(':input').attr('disabled', false);
 
     $('#petition-name').val('');
+    $('#petition-org').val('');
     $('#petition-email').val('');
 
     $('.petition__form').show();
