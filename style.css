@@ -617,3 +617,10 @@ hr.divider {
   margin-left: auto;
   margin-right: auto;
 }
+
+.petition textarea.form-control {
+  height: 300px;
+  line-height: 1.4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
