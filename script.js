@@ -3,9 +3,11 @@ $(function ready() {
   var allNames = '';
 
   var $sigNames = $('.js-signaturenames');
+  var staticNames = 'prof. dr. Marko Marinčič (FF UL), prof. dr. Igor Papič (FE UL), prof. dr. Stanislav Pejovnik (FKKT UL), prof. dr. Gregor Anderluh (Kemijski inštitut), prof. dr. Jože Mencinger (PF UL), prof. dr. Danijel Rebolj (UM), prof dr. Ivan Svetlik (FDV UL), prof. dr. Rado Bohinc (FDV UL, nekdanji rektor UP), doc. dr. Gorazd Kovačič (FF UL), prof. dr. Marija Javornik Krečič (FF UM)';
+  var staticNum = staticNames.split(', ').length;
 
   function showAllSignatures() {
-    $sigNames.text('');
+    $sigNames.text(staticNames + ', ');
     allNames.split(', ').forEach(function(name, i, arr) {
       $sigNames.append(name + (i === arr.length - 1 ? '' : ', '));
     });
@@ -16,7 +18,7 @@ $(function ready() {
   $('.js-more').on('click', showAllSignatures);
 
   $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
-    $sigNames.text((res.names || '').slice(0, 4000));
+    $sigNames.text(staticNames + ', ' + (res.names || '').slice(0, 4000));
     allNames = res.names;
     if (parseInt($sigNames.css('max-height'), 10) > $sigNames.height()) {
       showAllSignatures();
@@ -25,7 +27,7 @@ $(function ready() {
     var count = res.counter;
     if (typeof count === 'number' && !isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
-      $('.js-signaturecount').text(count);
+      $('.js-signaturecount').text(staticNum + count);
       $('.petition .progress-bar').attr('aria-valuenow', percent).css('width', percent + '%');
       $('.petition .progress-bar span').text(percent + '%');
     }
