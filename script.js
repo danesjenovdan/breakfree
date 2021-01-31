@@ -85,17 +85,17 @@ $(function ready() {
     $('.petition__reset').hide();
   });
 
-  var link = document.location.href;
-  $.ajax({
-    method: 'POST',
-    url: 'https://djnd.si/yomamasofat/',
-    data: {
-      fatmama: document.location.href,
-    },
-    success: function(resp) {
-      link = resp;
-    },
-  });
+  // var link = document.location.href;
+  // $.ajax({
+  //   method: 'POST',
+  //   url: 'https://djnd.si/yomamasofat/',
+  //   data: {
+  //     fatmama: document.location.href,
+  //   },
+  //   success: function(resp) {
+  //     link = resp;
+  //   },
+  // });
 
   var title = 'Peticija proti uničevanju javnega visokega šolstva in znanosti';
   var text = 'Podpri javno visoko šolstvo in znanost ter podpiši peticijo proti njuni razgradnji!';
@@ -107,7 +107,7 @@ $(function ready() {
     return false;
   });
   $('.js-twitter').on('click', function() {
-    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + link);
+    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + document.location.href);
     window.open(url, '_blank');
     return false;
   });
