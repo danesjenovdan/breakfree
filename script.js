@@ -51,7 +51,7 @@ $(function ready() {
     var data = {
       name: $('#petition-name').val(),
       email: $('#petition-email').val(),
-      peticija: petitionName + '.consent=' + $('#petition-consent')[0].checked
+      peticija: petitionName + '.consent=' + true
     };
 
     $.get('https://api.djnd.si/sign/', data, function(res) {
@@ -73,9 +73,6 @@ $(function ready() {
 
     $('#petition-name').val('');
     $('#petition-email').val('');
-    $('#petition-consent').each(function() {
-      this.checked = this.defaultChecked;
-    });
 
     $('.petition__form').show();
     $('.petition__reset').hide();
@@ -93,9 +90,9 @@ $(function ready() {
     },
   });
 
-  var title = 'Ustavimo razprodajo slovenske narave!';
-  var text = 'Podpišite peticijo in pomagajte ustaviti razprodajo naše narave in prihodnosti.';
-  var hashtags = '#naravenedamo';
+  var title = 'TODO: social share title';
+  var text = 'TODO: social share text';
+  var hashtags = 'TODO: hashtags';
   // social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=247501873333164&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);

@@ -9,6 +9,12 @@ p {
   color: #000;
 }
 
+@media (max-width: 767px) {
+  p {
+    font-size: 20px;
+  }
+}
+
 .text-red {
   color: #db6161;
 }
@@ -68,6 +74,12 @@ small {
   margin-top: 80px;
 }
 
+@media (max-width: 767px) {
+  .petition {
+    margin-top: 20px;
+  }
+}
+
 .landing {
   margin: 80px 0;
 }
@@ -94,11 +106,20 @@ h2.landing__subtitle {
   font-weight: 500;
 }
 
+@media (max-width: 767px) {
+  h2 p {
+    font-size: 28px;
+  }
+}
+
 hr.divider {
   border-top-color: #db6161;
   border-top-width: 8px;
   margin-top: 60px;
   margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 @media screen and (max-width: 991px) {
@@ -158,6 +179,16 @@ hr.divider {
 @media screen and (max-width: 768px) {
   .petition .petition__title--box {
     padding: 50px 25px;
+  }
+}
+
+.petition .petition__title p {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .petition .petition__title ol {
+    font-size: 24px;
   }
 }
 
