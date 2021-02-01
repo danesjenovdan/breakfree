@@ -6,11 +6,21 @@ $(function ready() {
   var staticNames = 'prof. dr. Marko Marinčič (FF UL, VSS), prof. dr. Igor Papič (UL), prof. dr. Stanislav Pejovnik (FKKT, nekdanji rektor UL), prof. dr. Gregor Anderluh (Kemijski inštitut), akad. prof. dr. Boris Sket (BF, nekdanji rektor UL), prof. dr. Jože Mencinger (PF, nekdanji rektor UL), prof. dr. Ivan Svetlik (FDV, nekdanji rektor UL), doc. dr. Gorazd Kovačič (FF UL, VSS), Branimir Štrukelj (SVIZ), izr. prof. dr. Marija Javornik Krečič (FF UM), prof. dr. Danijel Rebolj (nekdanji rektor UM), prof. dr. Rado Bohinc (nekdanji rektor UP), prof. dr. Lucija Čok (nekdanja rektorica UP)';
   var staticNum = staticNames.split(', ').length;
 
+  function chunk(arr, chunkSize) {
+    var chunkedArr = [];
+    for (var i = 0, len = arr.length; i < len; i += chunkSize)
+      chunkedArr.push(arr.slice(i, i + chunkSize));
+    return chunkedArr;
+  }
+
   function showAllSignatures() {
     $sigNames.text(staticNames + ', ');
-    allNames.split(', ').forEach(function(name, i, arr) {
-      $sigNames.append(name + (i === arr.length - 1 ? '' : ', '));
+    chunk(allNames, 2500).forEach(function(chunk) {
+      $sigNames.append(chunk);
     });
+    // allNames.split(', ').forEach(function(name, i, arr) {
+    //   $sigNames.append(name + (i === arr.length - 1 ? '' : ', '));
+    // });
     $('.js-more').remove();
     $('.js-signaturenames').removeClass('show-less');
   }
