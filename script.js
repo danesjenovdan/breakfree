@@ -3,7 +3,7 @@ $(function ready() {
   var allNames = '';
 
   var $sigNames = $('.js-signaturenames');
-  var staticNames = 'prof. dr. Marko Marinčič (FF UL), prof. dr. Igor Papič (FE UL), prof. dr. Stanislav Pejovnik (FKKT UL), prof. dr. Gregor Anderluh (Kemijski inštitut), prof. dr. Jože Mencinger (PF UL), prof. dr. Ivan Svetlik (FDV UL), doc. dr. Gorazd Kovačič (FF UL), Branimir Štrukelj (SVIZ), izr. prof. dr. Marija Javornik Krečič (FF UM), prof. dr. Danijel Rebolj (UM), prof. dr. Rado Bohinc (FDV UL, nekdanji rektor UP), prof. dr. Lucija Čok (nekdanja rektorica UP)';
+  var staticNames = 'prof. dr. Marko Marinčič (FF UL, VSS), prof. dr. Igor Papič (rektor UL), prof. dr. Stanislav Pejovnik (FKKT, nekdanji rektor UL), prof. dr. Gregor Anderluh (Kemijski inštitut), akad. prof. dr. Boris Sket (BF, nekdanji rektor UL), prof. dr. Jože Mencinger (PF, nekdanji rektor UL), prof. dr. Ivan Svetlik (FDV, nekdanji rektor UL), doc. dr. Gorazd Kovačič (FF UL, VSS), Branimir Štrukelj (SVIZ), izr. prof. dr. Marija Javornik Krečič (FF UM), prof. dr. Danijel Rebolj (nekdanji rektor UM), prof. dr. Rado Bohinc (nekdanji rektor UP), prof. dr. Lucija Čok (nekdanja rektorica UP)';
   var staticNum = staticNames.split(', ').length;
 
   function showAllSignatures() {
