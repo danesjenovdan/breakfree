@@ -10,12 +10,12 @@ p {
 }
 
 .text-red {
-  color: #20a048;
+  color: #008445;
 }
 
 a,
 .btn-link {
-  color: #20a048;
+  color: #008445;
   text-decoration: none;
 }
 
@@ -25,7 +25,7 @@ a:active,
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #20a048;
+  color: #008445;
   text-decoration: underline;
 }
 
@@ -65,7 +65,7 @@ small {
 }
 
 .petition {
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .landing {
@@ -95,10 +95,10 @@ h2.landing__subtitle {
 }
 
 hr.divider {
-  border-top-color: #20a048;
+  border-top-color: #008445;
   border-top-width: 8px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* .landing .landing__subtitle {
@@ -154,12 +154,13 @@ hr.divider {
 }
 
 .petition .petition__title--box {
-  background-color: #20a048;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   font-weight: 400;
-  padding: 100px 50px;
+  padding: 30px 30px 10px 30px;
   line-height: 1.4;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  /* border: 5px solid #008445; */
 }
 
 @media screen and (max-width: 768px) {
@@ -188,7 +189,7 @@ hr.divider {
 }
 
 .petition .progress-bar {
-  background-color: #20a048;
+  background-color: #008445;
 }
 
 .petition .progress__note {
@@ -206,7 +207,7 @@ hr.divider {
   margin-bottom: 20px;
   font-size: 15px;
   padding: 0 15px;
-  color: #20a048;
+  color: #008445;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -227,7 +228,7 @@ hr.divider {
   font-size: 36px;
   font-weight: 900;
   line-height: 76px;
-  background-color: #20a048;
+  background-color: #008445;
   color: #fff;
   border: 0;
   border-radius: 0;
@@ -388,7 +389,7 @@ hr.divider {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #20a048;
+  color: #008445;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -425,7 +426,7 @@ hr.divider {
 }
 
 .petition__reset .social-box {
-  background-color: #20a048;
+  background-color: #008445;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -461,23 +462,29 @@ hr.divider {
 .btn-social {
   background: transparent;
   color: #fff;
-  width: 55px;
-  height: 55px;
+  width: 140px;
+  height: 140px;
   padding: 4px 0;
   transition: 150ms all ease-in-out;
+  margin: 20px;
+  border-radius: 0;
+  border: 5px solid #008445;
+  padding: 20px;
 }
 
 .btn-social svg {
-  fill: #fff;
+  fill: #008445;
   transition: 150ms all ease-in-out;
+  width: 90%;
+  height: 90%;
 }
 
 .btn-social:hover {
-  background-color: #fff;
+  background-color: #008445;
 }
 
 .btn-social:hover svg {
-  fill: #20a048;
+  fill: #ffffff;
 }
 
 .footer .source-row {
@@ -563,7 +570,13 @@ hr.divider {
 }
 
 .img-tweet {
-  border: 3px solid #20a048;
+  border: 3px solid #008445;
   margin-bottom: 30px;
   width: 100%;
+}
+
+#days {
+  font-size: 92px;
+  position: relative;
+  top: 10px;
 }

@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: exitect
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  tls:
+    - hosts:
+        - exitect.lb.djnd.si
+        - exitect.si
+        - www.exitect.si
+      secretName: exitect-tls
+  rules:
+    - host: exitect.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: exitect
+                port:
+                  number: 80
+    - host: exitect.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: exitect
+                port:
+                  number: 80
+    - host: www.exitect.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: exitect
+                port:
+                  number: 80

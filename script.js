@@ -86,28 +86,29 @@ $(function ready() {
   });
 
   var link = document.location.href;
-  $.ajax({
-    method: 'POST',
-    url: 'https://djnd.si/yomamasofat/',
-    data: {
-      fatmama: document.location.href,
-    },
-    success: function(resp) {
-      link = resp;
-    },
-  });
+  // $.ajax({
+  //   method: 'POST',
+  //   url: 'https://djnd.si/yomamasofat/',
+  //   data: {
+  //     fatmama: document.location.href,
+  //   },
+  //   success: function(resp) {
+  //     link = resp;
+  //   },
+  // });
 
-  var title = 'Ustavimo razprodajo slovenske narave!';
-  var text = 'Podpišite peticijo in pomagajte ustaviti razprodajo naše narave in prihodnosti.';
-  var hashtags = '#naravenedamo';
+  var title = '@JernejVrtovec, končajte to norost.';
+  var FBtitle = 'Jernej Vrtovec, končajte to norost.';
+  var text = 'Na septembrskem srečanju evropskih ministrov za energijo odprite razpravo o izstopu iz Pogodbe o energetski listini (ECT). Zaščitite naše interese in okolje.';
+  var hashtags = '#talcifosilov #exitECT #fosilisomimo #koncajtetonorost';
   // social
   $('.js-facebook').on('click', function() {
-    var url = 'https://www.facebook.com/dialog/feed?app_id=247501873333164&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);
+    var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&quote=' + encodeURIComponent(FBtitle + ' ' + text + ' ' + hashtags);
     window.open(url, '_blank');
     return false;
   });
   $('.js-twitter').on('click', function() {
-    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + link);
+    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title + ' ' + text + ' ' + hashtags + ' ' + link);
     window.open(url, '_blank');
     return false;
   });
@@ -123,4 +124,17 @@ $(function ready() {
   }, 2000);
   });
 
+  // DATE MATH
+  // To set two dates to two variables
+  var date1 = new Date();
+  var date2 = new Date("09/22/2021");
+    
+  // To calculate the time difference of two dates
+  var differenceInTime = date2.getTime() - date1.getTime();
+    
+  // To calculate the no. of days between two dates
+  var differenceInDays = differenceInTime / (1000 * 3600 * 24);
+    
+  //To display the final no. of days (result)
+  $('#days').text(Math.floor(differenceInDays));
 });
