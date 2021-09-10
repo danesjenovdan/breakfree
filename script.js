@@ -105,11 +105,13 @@ $(function ready() {
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&quote=' + encodeURIComponent(FBtitle + ' ' + text + ' ' + hashtags);
     window.open(url, '_blank');
+    plausible('FB share')
     return false;
   });
   $('.js-twitter').on('click', function() {
     var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title + ' ' + text + ' ' + hashtags + ' ' + link);
     window.open(url, '_blank');
+    plausible('TW share')
     return false;
   });
   $('.js-email').on('click', function() {
