@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: stanovanjske-zadruge
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  tls:
+    - hosts:
+        - stanovanjske-zadruge.lb.djnd.si
+      secretName: stanovanjske-zadruge-tls
+  rules:
+    - host: stanovanjske-zadruge.lb.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: stanovanjske-zadruge
+                port:
+                  number: 80

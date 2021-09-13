@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stanovanjske-zadruge-deployment
+  labels:
+    app: stanovanjske-zadruge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stanovanjske-zadruge
+  template:
+    metadata:
+      labels:
+        app: stanovanjske-zadruge
+    spec:
+      containers:
+      - name: stanovanjske-zadruge
+        image: rg.fr-par.scw.cloud/djnd/stanovanjske-zadruge:latest
+        ports:
+        - containerPort: 80
