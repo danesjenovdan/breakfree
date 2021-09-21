@@ -6,7 +6,11 @@ $(function ready() {
   $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
     $('.counter').text(res.counter);
     $('.counter-minus').text(5000 - res.counter);
-    progressBar.css('width', Math.round(res.counter/5000*100) + '%');
+    let progressBarWidth = Math.ceil(res.counter/5000*100)
+    if (progressBarWidth < 2) {
+      progressBarWidth = 2;
+    }
+    progressBar.css('width', progressBarWidth + '%');
     progressBar.attr('aria-valuenow', res.counter);
   });
 
@@ -56,17 +60,6 @@ $(function ready() {
         }
       }
     );
-  });
-
-  $('.petition__reset .btn').on('click', function() {
-    $('form.sign-petition-box').find(':input').attr('disabled', false);
-
-    $('#name').val('');
-    $('#email').val('');
-    $('#consent').prop("checked", false);
-
-    $('form.sign-petition-box').show();
-    $('.petition__reset').hide();
   });
 
 });

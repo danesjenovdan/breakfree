@@ -5,8 +5,13 @@ body {
 }
 
 .hero {
-  padding: 4rem 0 6rem 0;
+  padding: 0 0 6rem 0;
   background-color: #efb046;
+}
+
+.hero .logo {
+  width: 12rem;
+  margin: 2rem;
 }
 
 .hero p {
@@ -25,15 +30,17 @@ body {
 .hero .hero-box {
   background-color: #f47c3d;
   position: relative;
-  padding: 1.5rem;
+  padding: 2rem;
+  height: 100%;
 }
 
 .hero .hero-box .icon {
-  padding: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .hero .hero-box p {
   font-size: 1.25rem;
+  margin-bottom: 0;
 }
 
 .outline {
@@ -84,7 +91,7 @@ body {
   height: 2rem;
   background-color: #efb046;
   border-radius: 2rem;
-  padding: 2px;
+  padding: 3px;
   overflow: visible;
 }
 
@@ -183,6 +190,11 @@ body {
   top: 0;
   width: 100%;
   transform: translateY(-50%);
+}
+
+.footer .logo-right img {
+  margin-left: 1.5rem;
+  width: 15rem;
 }
 
 .checkbox-wrapper {
