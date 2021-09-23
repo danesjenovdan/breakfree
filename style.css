@@ -10,8 +10,8 @@ body {
 }
 
 .hero .logo {
-  width: 12rem;
-  margin: 2rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 .hero p {
