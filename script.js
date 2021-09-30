@@ -21,10 +21,6 @@ $(function ready() {
     const emailVal = $.trim($('#email').val() || '');
     const consent = $('#consent').is(':checked');
 
-    //console.log(emailVal);
-    //console.log(nameVal);
-    //console.log(consent);
-
     if (!nameVal || nameVal.length < 4 || nameVal.indexOf(' ') === -1) {
       alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
       return;
@@ -51,9 +47,17 @@ $(function ready() {
 
     $.get('https://api.djnd.si/sign/', data, function(res) {
         if (res === 'Saved') {
-          $('.sign-error').text('');
-          $('form.sign-petition-box').hide();
-          $('.petition__reset').show();
+          $.post( "https://stanovanjske-zadruge-zemljevid.lb.djnd.si/api/token/", function( data ) {
+            console.log( data )
+            if (data.status === 'success') {
+              $('.sign-error').text('');
+              $('form.sign-petition-box').hide();
+              $('.petition__reset').show();
+              const token = data.data.token;
+              console.log(token)
+              $('.petition__thanks').html('Zdaj pa obišči <a href="https://stanovanjske-zadruge-zemljevid.lb.djnd.si/?token=' + token + '" target="_blank">zemljevid</a> in pomagaj zgraditi stanovanjsko skupnost.');
+            }
+          }, "json");
         } else {
           $('.petition-error').text('Napaka: ' + res);
           $('form.sign-petition-box').find(':input').attr('disabled', false);
