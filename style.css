@@ -54,6 +54,10 @@ body {
   pointer-events: none;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .hero .white-blob {
   position: absolute;
   bottom: 0;
@@ -61,28 +65,28 @@ body {
   transform: translateY(50%);
 }
 
-.map {
+.signatures, .map {
   padding: 2rem 0;
 }
 
 @media (min-width: 992px) {
-  .map {
+  .signatures {
     padding: 6rem 0;
   }
 }
 
-.map h1 {
+.signatures h1 {
   font-family: 'Azeret Mono', monospace;
   font-weight: 600;
   font-size: 4rem;
   margin-bottom: 0;
 }
 
-.map h1 span {
+.signatures h1 span {
   font-weight: 900;
 }
 
-.map h2 {
+.signatures h2 {
   font-weight: 600;
 }
 

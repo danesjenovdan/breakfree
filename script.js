@@ -5,8 +5,8 @@ $(function ready() {
 
   $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
     $('.counter').text(res.counter);
-    $('.counter-minus').text(5000 - res.counter);
-    let progressBarWidth = Math.ceil(res.counter/5000*100)
+    $('.counter-minus').text(3000 - res.counter);
+    let progressBarWidth = Math.ceil(res.counter/3000*100)
     if (progressBarWidth < 2) {
       progressBarWidth = 2;
     }
