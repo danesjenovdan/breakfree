@@ -97,10 +97,10 @@ $(function ready() {
   //   },
   // });
 
-  var title = '@JernejVrtovec, končajte to norost.';
-  var FBtitle = 'Jernej Vrtovec, končajte to norost.';
-  var text = 'Na septembrskem srečanju evropskih ministrov za energijo odprite razpravo o izstopu iz Pogodbe o energetski listini (ECT). Zaščitite naše interese in okolje.';
-  var hashtags = '#talcifosilov #exitECT #fosilisomimo #koncajtetonorost';
+  var title = '@JernejVrtovec, nismo pozabili, da je Slovenija še vedno članica ECT, ki je ovira za razogljičenje.';
+  var FBtitle = 'Jernej Vrtovec, nismo pozabili, da je Slovenija še vedno članica ECT, ki je ovira za razogljičenje.';
+  var text = 'Prvo priložnost za predlog izstopa ste zamudili. Boste imeli do COP26 v Glasgowu konec meseca že čisto vest, mi pa bolj čisto okolje?';
+  var hashtags = '#exitECT #talcifosilov #koncajtetonorost';
   // social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&quote=' + encodeURIComponent(FBtitle + ' ' + text + ' ' + hashtags);
@@ -129,7 +129,7 @@ $(function ready() {
   // DATE MATH
   // To set two dates to two variables
   var date1 = new Date();
-  var date2 = new Date("09/22/2021");
+  var date2 = new Date("10/31/2021");
     
   // To calculate the time difference of two dates
   var differenceInTime = date2.getTime() - date1.getTime();
