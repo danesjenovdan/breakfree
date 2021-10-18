@@ -19,7 +19,6 @@ $(function ready() {
 
     const nameVal = $.trim($('#name').val() || '');
     const emailVal = $.trim($('#email').val() || '');
-    const consent = $('#consent').is(':checked');
 
     if (!nameVal || nameVal.length < 4 || nameVal.indexOf(' ') === -1) {
       alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
@@ -29,11 +28,6 @@ $(function ready() {
     const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!emailVal.match(emailPattern)) {
       alert('Tvoj email ne izgleda kot email. Prosim poskusi ponovno.');
-      return;
-    }
-
-    if (!consent) {
-      alert("Strinjate se morate s pogoji.");
       return;
     }
 
@@ -55,7 +49,7 @@ $(function ready() {
               $('.petition__reset').show();
               const token = data.data.token;
               console.log(token)
-              $('.petition__thanks').html('Zdaj pa obišči <a href="https://stanovanjske-zadruge-zemljevid.lb.djnd.si/?token=' + token + '" target="_blank">zemljevid</a> in pomagaj zgraditi stanovanjsko skupnost.');
+              $('.petition__thanks').html('Zdaj pa obišči <a href="https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=' + token + '" target="_blank">zemljevid</a> in pomagaj zgraditi stanovanjsko skupnost.');
             }
           }, "json");
         } else {
