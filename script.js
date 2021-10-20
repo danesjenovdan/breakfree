@@ -129,7 +129,7 @@ $(function ready() {
   // DATE MATH
   // To set two dates to two variables
   var date1 = new Date();
-  var date2 = new Date("10/31/2021");
+  var date2 = new Date("11/01/2021");
     
   // To calculate the time difference of two dates
   var differenceInTime = date2.getTime() - date1.getTime();
