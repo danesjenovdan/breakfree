@@ -8,4 +8,4 @@ resources:
 images:
   - name: stanovanjske-zadruge
     newName: rg.fr-par.scw.cloud/djnd/stanovanjske-zadruge
-    newTag: '0b6c24d6a5ee3276e71a242d03a01b84bb8a4a61'
+    newTag: '80e06aa353c4e279a11e005017e35f85bcfceda2'
