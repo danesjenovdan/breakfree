@@ -49,7 +49,7 @@ $(function ready() {
               $('.petition__reset').show();
               const token = data.data.token;
               console.log(token)
-              $('.petition__thanks').html('Zdaj pa obišči <a href="https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=' + token + '" target="_blank">zemljevid</a> in pomagaj zgraditi stanovanjsko skupnost.');
+              $('.petition__thanks').html(`Pomagaj graditi virtualno stanovanjsko skupnost. Obišči <a href="https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=${token}" target="_blank">zemljevid</a> in dodaj svoj košček.`);
             }
           }, "json");
         } else {

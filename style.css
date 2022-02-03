@@ -174,6 +174,27 @@ body {
   background-color: #68c5e3;
 }
 
+.btn-bottom-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-bottom {
+  color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: #82CEE8;
+  background-image: url(./img/button-border.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  padding: 0.5rem 3rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+
 .footer {
   background-color: #FBEA22;
   padding: 5rem 0 3rem 0;
