@@ -6,7 +6,7 @@ body {
 
 .hero {
   padding: 0 0 6rem 0;
-  background-color: #82CEE8;
+  background-color: #EFB046;
 }
 
 .hero .logo {
@@ -28,7 +28,7 @@ body {
 }
 
 .hero .hero-box {
-  background-color: #FBEA22;
+  background-color: #F47C3D;
   position: relative;
   padding: 2rem;
   height: 100%;
@@ -100,14 +100,14 @@ body {
   margin: 2rem 0;
   width: 100%;
   height: 2rem;
-  background-color: #FBEA22;
+  background-color: #EFB046;
   border-radius: 2rem;
   padding: 3px;
   overflow: visible;
 }
 
 .progress-bar {
-  background-color: #82CEE8;
+  background-color: #4d957f;
   border-radius: 2rem;
   height: 100%;
   position: relative;
@@ -142,7 +142,7 @@ body {
 }
 
 .sign-petition .sign-petition-box {
-  background-color: #FBEA22;
+  background-color: #EFB046;
   padding: 3rem;
 }
 
@@ -162,7 +162,7 @@ body {
   color: black;
   font-weight: 700;
   font-size: 1.5rem;
-  background-color: #82CEE8;
+  background-color: #4d957f;
   background-image: url('./img/button-border.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -171,7 +171,7 @@ body {
 }
 
 .sign-petition .sign-petition-box button:hover {
-  background-color: #68c5e3;
+  filter: brightness(110%);
 }
 
 .btn-bottom-wrapper {
@@ -183,7 +183,7 @@ body {
   color: black;
   font-weight: 700;
   font-size: 1.5rem;
-  background-color: #82CEE8;
+  background-color: #4d957f;
   background-image: url(./img/button-border.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -194,9 +194,13 @@ body {
   text-decoration: none;
   display: block;
 }
+.btn-bottom:hover {
+  color: black;
+  filter: brightness(110%);
+}
 
 .footer {
-  background-color: #FBEA22;
+  background-color: #EFB046;
   padding: 5rem 0 3rem 0;
   margin-top: 3rem;
   position: relative;
