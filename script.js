@@ -19,6 +19,7 @@ $(function ready() {
 
     const nameVal = $.trim($('#name').val() || '');
     const emailVal = $.trim($('#email').val() || '');
+    const newsletter = $('#newsletter').is(":checked"); // TODO: subscribe
 
     if (!nameVal || nameVal.length < 4 || nameVal.indexOf(' ') === -1) {
       alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
@@ -44,16 +45,15 @@ $(function ready() {
           $.post( "https://stanovanjske-zadruge-zemljevid.lb.djnd.si/api/token/", function( data ) {
             console.log( data )
             if (data.status === 'success') {
+              const token = data.data.token;
               $('.sign-error').text('');
               $('form.sign-petition-box').hide();
               $('.petition__reset').show();
-              const token = data.data.token;
-              console.log(token)
-              $('.petition__thanks').html(`Pomagaj graditi virtualno stanovanjsko skupnost. Obišči <a href="https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=${token}" target="_blank">zemljevid</a> in dodaj svoj košček.`);
+              $('#map-link').attr("href", `https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=${token}`);
             }
           }, "json");
         } else {
-          $('.petition-error').text('Napaka: ' + res);
+          $('#petition__error').text('Prišlo je do napake: ' + res);
           $('form.sign-petition-box').find(':input').attr('disabled', false);
         }
       }

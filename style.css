@@ -4,6 +4,15 @@ body {
   /* font-family: 'Azeret Mono', monospace; */
 }
 
+a {
+  color: #4d957f;
+}
+
+a:hover {
+  color: #4d957f;
+  text-decoration: none;
+}
+
 .hero {
   padding: 0 0 6rem 0;
   background-color: #EFB046;
@@ -12,6 +21,12 @@ body {
 .hero .logo {
   width: 100%;
   padding: 2rem;
+}
+@media (min-width: 992px) {
+  .hero .logo {
+    width: 80%;
+    padding: 2rem;
+  }
 }
 
 .hero p {
@@ -36,7 +51,12 @@ body {
 
 .hero .hero-box .icon {
   padding-bottom: 1rem;
-  width: 5rem;
+  width: 8rem;
+}
+@media (min-width: 992px) {
+  .hero .hero-box .icon {
+    width: 12rem;
+  }
 }
 
 .hero .hero-box p {
@@ -65,10 +85,24 @@ body {
   transform: translateY(50%);
 }
 
+.map h2 {
+  font-family: 'Azeret Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .map p {
   font-size: 1.5rem;
   line-height: 1.4;
   margin-top: 0.5rem;
+}
+
+.map img {
+  object-fit: none;
+  object-position: center;
 }
 
 .signatures, .map {
@@ -84,8 +118,14 @@ body {
 .signatures h1 {
   font-family: 'Azeret Mono', monospace;
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .signatures h1 {
+    font-size: 4rem;
+  }
 }
 
 .signatures h1 span {
@@ -97,13 +137,19 @@ body {
 }
 
 .progress {
-  margin: 2rem 0;
-  width: 100%;
+  margin: 2rem 1rem;
+  width: 90%;
   height: 2rem;
   background-color: #EFB046;
   border-radius: 2rem;
   padding: 3px;
   overflow: visible;
+}
+@media (min-width: 992px) {
+  .progress {
+    margin: 2rem 0;
+    width: 100%;
+  }
 }
 
 .progress-bar {
@@ -174,6 +220,10 @@ body {
   filter: brightness(110%);
 }
 
+#petition__error {
+  color: red;
+}
+
 .btn-bottom-wrapper {
   display: flex;
   justify-content: center;
@@ -192,6 +242,7 @@ body {
   margin-top: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   display: block;
 }
 .btn-bottom:hover {
@@ -216,9 +267,8 @@ body {
 .footer a {
   color: black;
 }
-
 .footer a:hover {
-  color: #68c5e3;
+  color: #4d957f;
 }
 
 .footer .white-blob {

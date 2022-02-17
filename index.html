@@ -118,20 +118,20 @@
             <input type="email" class="form-control" id="email" placeholder="E-naslov">
           </div>
           <div class="mb-3 form-check checkbox-wrapper">
-            <input type="checkbox" class="form-check-input" id="consent">
+            <input type="checkbox" class="form-check-input" id="consent" required>
             <label class="form-check-label" for="consent">Soglašam s hrambo in uporabo podatkov za namene poročanja o številu podpornikov in pošiljanja e-novic.</label>
           </div>
           <div class="mb-3 form-check checkbox-wrapper">
             <input type="checkbox" class="form-check-input" id="newsletter">
             <label class="form-check-label" for="newsletter">Želim ostati obveščen_a o razvoju stanovanjskega zadružninštva in drugih novicah, povezanih s stanovanjsko preskrbo - strinjam se z občasnim prejemanjem e-novic.</label>
           </div>
+          <p id="petition__error"></p>
           <button type="submit" class="btn my-2">PODPIŠI</button>
-          <p class="petition-error"></p>
         </form>
         <div class="petition__reset sign-petition-box position-relative" style="display: none;">
           <div class="outline"></div>
-          <h5 class="mb-4">Hvala za tvoj podpis!</h5>
-          <h5 class="petition__thanks mb-4"></h5>
+          <h5 class="mb-4">Hvala za podporo!</h5>
+          <h5 class="mb-4">Zdaj pa obišči <a href="https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/" id="map-link" target="_blank">zemljevid</a> in pomagaj graditi stanovanjsko skupnost.</h5>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@
 <section class="map">
   <div class="container">
     <div class="row my-4">
-      <p>Virtualna skupnost podpisnikov.</p>
+      <h2>Virtualna skupnost podpisnikov</h2>
       <a href="https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/" target="_blank">
         <img class="img-fluid" src="https://meta-image-generator.lb.djnd.si/external/zadrugator-map">
       </a>
