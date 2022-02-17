@@ -232,13 +232,13 @@ a:hover {
 .btn-bottom {
   color: black;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #4d957f;
   background-image: url(./img/button-border.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border: none;
-  padding: 0.5rem 3rem;
+  padding: 1.5rem;
   margin-top: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -248,6 +248,12 @@ a:hover {
 .btn-bottom:hover {
   color: black;
   filter: brightness(110%);
+}
+@media (min-width: 992px) {
+  .btn-bottom {
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+  }
 }
 
 .footer {
