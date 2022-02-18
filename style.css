@@ -211,6 +211,7 @@ a:hover {
   font-size: 1.25rem;
 }
 
+.sign-petition .sign-petition-box input[type=submit],
 .sign-petition .sign-petition-box button {
   color: black;
   font-weight: 700;
@@ -223,13 +224,25 @@ a:hover {
   padding: 0.5rem 3rem;
 }
 
+.sign-petition .sign-petition-box input[type=submit]:hover,
 .sign-petition .sign-petition-box button:hover {
   filter: brightness(110%);
+}
+
+.brandingLogo {
+  text-align: right;
 }
 
 #petition__error {
   color: red;
 }
+
+#mc_embed_signup {
+  /* background: #fff;  */
+  clear: left; 
+  /* font: 14px Helvetica,Arial,sans-serif;  */
+}
+
 
 .btn-bottom-wrapper {
   display: flex;

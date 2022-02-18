@@ -1,9 +1,7 @@
 $(function ready() {
-  const petitionName = 'stanovanjskezadruge';
-
   const progressBar = $('.progress-bar');
 
-  $.ajax('https://api.djnd.si/getAllSignaturesAndCountForMultiple/?peticije=' + petitionName).done(function(res) {
+  $.ajax('https://stanovanjske-zadruge-zemljevid.lb.djnd.si/api/subscribers-count/').done(function(res) {
     $('.counter').text(res.counter);
     $('.counter-minus').text(3000 - res.counter);
     let progressBarWidth = Math.ceil(res.counter/3000*100)
@@ -19,7 +17,7 @@ $(function ready() {
 
     const nameVal = $.trim($('#name').val() || '');
     const emailVal = $.trim($('#email').val() || '');
-    const newsletter = $('#newsletter').is(":checked"); // TODO: subscribe
+    const newsletter = $('#newsletter').is(":checked");
 
     if (!nameVal || nameVal.length < 4 || nameVal.indexOf(' ') === -1) {
       alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
@@ -37,27 +35,22 @@ $(function ready() {
     const data = {
       name: nameVal,
       email: emailVal,
-      peticija: petitionName + '.consent=' + true
+      newsletter: newsletter
     };
 
-    $.get('https://api.djnd.si/sign/', data, function(res) {
-        if (res === 'Saved') {
-          $.post( "https://stanovanjske-zadruge-zemljevid.lb.djnd.si/api/token/", function( data ) {
-            console.log( data )
-            if (data.status === 'success') {
-              const token = data.data.token;
-              $('.sign-error').text('');
-              $('form.sign-petition-box').hide();
-              $('.petition__reset').show();
-              $('#map-link').attr("href", `https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=${token}`);
-            }
-          }, "json");
-        } else {
-          $('#petition__error').text('Prišlo je do napake: ' + res);
-          $('form.sign-petition-box').find(':input').attr('disabled', false);
-        }
-      }
-    );
+    // subscribe and get map token
+    $.post('https://stanovanjske-zadruge-zemljevid.lb.djnd.si/api/subscriber/', JSON.stringify(data), function(data, status) {
+      // console.log(data, status)
+      const token = data.data.token;
+      $('.sign-error').text('');
+      $('form.sign-petition-box').hide();
+      $('.petition__reset').show();
+      $('#map-link').attr("href", `https://stanovanjske-zadruge-zemljevid-peticija.lb.djnd.si/?token=${token}`);
+    }).catch(function(error) {
+      // console.log(JSON.parse(error.responseText))
+      $('#petition__error').text('Se opravičujemo, prišlo je do napake.');
+      $('form.sign-petition-box').find(':input').attr('disabled', false);
+    });
   });
 
 });
