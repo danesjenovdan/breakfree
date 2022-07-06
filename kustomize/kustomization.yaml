@@ -8,4 +8,4 @@ resources:
 images:
   - name: naravenedamo
     newName: rg.fr-par.scw.cloud/djnd/naravenedamo
-    newTag: 'fb88e3ac34fca871105e4da2b2041e274b8933c5'
+    newTag: 'b9396c70377e2c14887244528d84c570f8683057'
