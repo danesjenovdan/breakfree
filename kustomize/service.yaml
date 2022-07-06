@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: naravenedamo
+spec:
+  selector:
+    app: naravenedamo
+  ports:
+    - protocol: TCP
+      port: 80

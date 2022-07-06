@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: naravenedamo
+  labels:
+    app: naravenedamo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: naravenedamo
+  template:
+    metadata:
+      labels:
+        app: naravenedamo
+    spec:
+      containers:
+      - name: naravenedamo
+        image: rg.fr-par.scw.cloud/djnd/naravenedamo:latest
+        ports:
+        - containerPort: 80

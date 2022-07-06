@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: naravenedamo
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+images:
+  - name: naravenedamo
+    newName: rg.fr-par.scw.cloud/djnd/naravenedamo
+    newTag: 'bee9e2d7391ac9fef6f8fd490026176438be92ef'
