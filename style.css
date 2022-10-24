@@ -10,12 +10,12 @@ p {
 }
 
 .text-red {
-  color: #20a048;
+  color: #ed1c24;
 }
 
 a,
 .btn-link {
-  color: #20a048;
+  color: #ed1c24;
   text-decoration: none;
 }
 
@@ -25,7 +25,7 @@ a:active,
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #20a048;
+  color: #ed1c24;
   text-decoration: underline;
 }
 
@@ -95,7 +95,7 @@ h2.landing__subtitle {
 }
 
 hr.divider {
-  border-top-color: #20a048;
+  border-top-color: #ed1c24;
   border-top-width: 8px;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -154,7 +154,7 @@ hr.divider {
 }
 
 .petition .petition__title--box {
-  background-color: #20a048;
+  background-color: #ed1c24;
   color: #fff;
   font-weight: 400;
   padding: 100px 50px;
@@ -182,13 +182,13 @@ hr.divider {
 
 .petition .progress {
   height: 35px;
-  background-color: rgba(32, 160, 72, 0.25);
+  background-color: rgba(237, 28, 36, 0.25);
   border-radius: 0;
   margin-bottom: 10px;
 }
 
 .petition .progress-bar {
-  background-color: #20a048;
+  background-color: #ed1c24;
 }
 
 .petition .progress__note {
@@ -206,7 +206,7 @@ hr.divider {
   margin-bottom: 20px;
   font-size: 15px;
   padding: 0 15px;
-  color: #20a048;
+  color: #ed1c24;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -227,7 +227,7 @@ hr.divider {
   font-size: 36px;
   font-weight: 900;
   line-height: 76px;
-  background-color: #20a048;
+  background-color: #ed1c24;
   color: #fff;
   border: 0;
   border-radius: 0;
@@ -388,7 +388,7 @@ hr.divider {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 16px;
-  color: #20a048;
+  color: #ed1c24;
 }
 
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -425,7 +425,7 @@ hr.divider {
 }
 
 .petition__reset .social-box {
-  background-color: #20a048;
+  background-color: #ed1c24;
   padding: 10px;
   font-size: 30px;
   text-align: center;
@@ -477,7 +477,7 @@ hr.divider {
 }
 
 .btn-social:hover svg {
-  fill: #20a048;
+  fill: #ed1c24;
 }
 
 .footer .source-row {
@@ -507,7 +507,7 @@ hr.divider {
 /* MUKI */
 
 .signatures {
-  background-color: rgba(32, 160, 72, 0.25);
+  background-color: rgba(237, 28, 36, 0.25);
   padding: 30px;
   margin-bottom: 50px;
   font-size: 16px;
@@ -522,7 +522,7 @@ hr.divider {
 .signature-names.show-less::after {
   content: ' ';
   display: table;
-  background-image: linear-gradient(to bottom, transparent, rgba(32, 160, 72, 0.25));
+  background-image: linear-gradient(to bottom, transparent, rgba(237, 28, 36, 0.25));
   width: 100%;
   height: 45px;
   position: absolute;
@@ -563,7 +563,7 @@ hr.divider {
 }
 
 .img-tweet {
-  border: 3px solid #20a048;
+  border: 3px solid #ed1c24;
   margin-bottom: 30px;
   width: 100%;
 }

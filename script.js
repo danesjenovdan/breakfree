@@ -1,5 +1,5 @@
 $(function ready() {
-  var petitionName = 'nedamonarave';
+  var petitionName = 'rtv';
   var allNames = '';
 
   var $sigNames = $('.js-signaturenames');
@@ -99,7 +99,7 @@ $(function ready() {
 
   var title = 'Ustavimo razprodajo slovenske narave!';
   var text = 'Podpišite peticijo in pomagajte ustaviti razprodajo naše narave in prihodnosti.';
-  var hashtags = '#naravenedamo';
+  var hashtags = '#rtv';
   // social
   $('.js-facebook').on('click', function() {
     var url = 'https://www.facebook.com/dialog/feed?app_id=247501873333164&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent(document.location.href) + '&ref=responsive&name=' + encodeURIComponent(title);

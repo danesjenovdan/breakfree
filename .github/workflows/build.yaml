@@ -22,14 +22,14 @@ jobs:
           username: nologin
           password: ${{ secrets.SCW_SECRET_TOKEN }}
       -
-        name: Build and push naravenedamo
+        name: Build and push rtv
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
           tags: |
-            rg.fr-par.scw.cloud/djnd/naravenedamo:${{ github.sha }}
-            rg.fr-par.scw.cloud/djnd/naravenedamo:latest
+            rg.fr-par.scw.cloud/djnd/rtv:${{ github.sha }}
+            rg.fr-par.scw.cloud/djnd/rtv:latest
       -
         name: Update image versions in kustomize/kustomization.yaml
         run: |

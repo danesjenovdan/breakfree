@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: naravenedamo
+  name: rtv
 spec:
   selector:
-    app: naravenedamo
+    app: rtv
   ports:
     - protocol: TCP
       port: 80

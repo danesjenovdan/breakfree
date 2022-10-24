@@ -1,34 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: naravenedamo
+  name: rtv
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - naravenedamo.lb.djnd.si
-        - naravenedamo.djnd.si
-      secretName: naravenedamo-tls
+        - rtv.lb.djnd.si
+      secretName: rtv-tls
   rules:
-    - host: naravenedamo.lb.djnd.si
+    - host: rtv.lb.djnd.si
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: naravenedamo
-                port:
-                  number: 80
-    - host: naravenedamo.djnd.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: naravenedamo
+                name: rtv
                 port:
                   number: 80

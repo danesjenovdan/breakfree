@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: naravenedamo
+  name: rtv
   labels:
-    app: naravenedamo
+    app: rtv
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: naravenedamo
+      app: rtv
   template:
     metadata:
       labels:
-        app: naravenedamo
+        app: rtv
     spec:
       containers:
-      - name: naravenedamo
-        image: rg.fr-par.scw.cloud/djnd/naravenedamo:latest
+      - name: rtv
+        image: rg.fr-par.scw.cloud/djnd/rtv:latest
         ports:
         - containerPort: 80
