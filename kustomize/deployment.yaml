@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: rtv
-        image: rg.fr-par.scw.cloud/djnd/rtv:latest
+        image: rtv
         ports:
         - containerPort: 80
