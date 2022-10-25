@@ -44,11 +44,11 @@ $(function ready() {
       return;
     }
 
-    var namePattern = /^(([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+[\-\']?)*([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+)?\s)+([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+[\-\']?)*([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+)?$/;
-    if (!$('#petition-name').val().match(namePattern)) {
-      alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
-      return;
-    }
+    // var namePattern = /^(([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+[\-\']?)*([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+)?\s)+([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+[\-\']?)*([A-Za-zšđžčćäëöüŠĐŽČĆÄËÖÜéÉ]+)?$/;
+    // if (!$('#petition-name').val().match(namePattern)) {
+    //   alert('Tvoje ime ne izgleda kot ime. Prosim poskusi ponovno.');
+    //   return;
+    // }
 
     $(this).find(':input').attr('disabled', true);
 
@@ -97,8 +97,8 @@ $(function ready() {
     },
   });
 
-  var title = 'Ustavimo razprodajo slovenske narave!';
-  var text = 'Podpišite peticijo in pomagajte ustaviti razprodajo naše narave in prihodnosti.';
+  var title = 'ZA nepristransko in javno RTV Slovenijo!';
+  var text = 'Zahtevamo transparentno in strokovno referendumsko kampanjo in javno RTV brez politično nastavljenega vodstva. Pridružite se mi in podpišite peticijo.';
   var hashtags = '#rtv';
   // social
   $('.js-facebook').on('click', function() {
