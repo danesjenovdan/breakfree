@@ -26,7 +26,7 @@ $(function ready() {
       showAllSignatures();
     }
     var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
-    var count = res.counter;
+    var count = res.counter + 37; // organizational signatures
     if (typeof count === 'number' && !isNaN(count)) {
       var percent = Math.floor(Math.min(count / maxSignatures * 100, 100));
       $('.js-signaturecount').text(count);
