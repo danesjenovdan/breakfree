@@ -8,4 +8,4 @@ resources:
 images:
   - name: rtv
     newName: rg.fr-par.scw.cloud/djnd/rtv
-    newTag: '1e5e584c8307711537b0a0a9f23e432e74c7163e'
+    newTag: '1cf22b3520c9c0aade8ede4ff2a7ef753051c256'
