@@ -64,315 +64,350 @@ peticijo za takojšnji odstop politično nastavljenega vodstva RTV Slovenija!">
       }
     }
   </style>
+
+  <style>
+    body {
+      background-image: url('img/background.png');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-color: #D9D9D9;
+      padding-bottom: 5rem;
+    }
+
+    .menu {
+      /* Menu Menu Menu */
+      margin-left: 64px;
+      margin-top: 59px;
+
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29px;
+
+      color: #1E4398;
+    }
+    .menu span {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .info {
+      padding-top: 75vw;
+      padding-left: 38vw;
+    }
+
+    .info p {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29px;
+
+      color: #1E4398;
+
+      max-width: 600px;
+
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .info ul {
+
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 950;
+      font-size: 32px;
+      line-height: 37px;
+
+      color: #1E4398;
+
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      list-style-type: none;
+    }
+
+    .red {
+      color: #FF866F !important
+    }
+
+    .footer {
+      background-color: #FF866F;
+      padding-top: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .info ul {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  </style>
+  <style>
+    .loader {
+      font-size: 10px;
+      margin: 50px auto;
+      text-indent: -9999em;
+      width: 26vw;
+      height: 26vw;
+      border-radius: 50%;
+      background: #FF866F;
+      background: -moz-linear-gradient(left, #FF866F 10%, rgba(255, 255, 255, 0) 42%);
+      background: -webkit-linear-gradient(left, #FF866F 10%, rgba(255, 255, 255, 0) 42%);
+      background: -o-linear-gradient(left, #FF866F 10%, rgba(255, 255, 255, 0) 42%);
+      background: -ms-linear-gradient(left, #FF866F 10%, rgba(255, 255, 255, 0) 42%);
+      background: linear-gradient(to right, #FF866F 10%, rgba(255, 255, 255, 0) 42%);
+      position: absolute;
+      -webkit-animation: load3 1.4s infinite ease;
+      animation: load3 1.4s infinite ease;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+
+      top: 18vw;
+      left: 47vw;
+    }
+
+    @media (max-width: 520px) {
+      .loader {
+        top: 11vw;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .loader {
+        top: 9vw;
+      }
+    }
+
+    .loader:before {
+      width: 50%;
+      height: 50%;
+      background: #FF866F;
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+    }
+
+    .loader:after {
+      background: #1E4398;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @-webkit-keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader-inline {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      top: 3px;
+      left: -10px;
+      margin: 0;
+    }
+    .loader-inline:after {
+      background-color: #D9D9D9;
+    }
+  </style>
+  <style>
+    .foreground {
+      pointer-events: none;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background-image: url('img/foreground.png');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      padding-bottom: 5rem;
+    }
+  </style>
   <script defer data-domain="rtv.glas-ljudstva.si" src="https://plausible.lb.djnd.si/js/plausible.js"></script>
 </head>
 
 <body>
+  <div class="loader"></div>
+  <div class="foreground"></div>
   <div class="container-fluid">
+    <div class="menu">
+      <span>Meni</span>
+      <span>Ne</span>
+      <span>Obstaja</span>
+    </div>
+  </div>
+  <div class="container-fluid info">
+
     <div class="row">
-      <img class="img-responsive" src="img/rtv-odstopite-cover-02.jpg">
+      <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis facilisis justo at vehicula. Nulla
+        fringilla, erat id molestie <strong>asdf asdf dseik</strong> congue, eros nisi condimentum lectus, vehicula
+        viverra est lacus in diam. Nulla
+        facilisi. Nunc tempor augue ante, vel hendrerit lacus porttitor ut. Ut laoreet tortor hendrerit diam commodo
+        feugiat. Aenean vel purus placerat, rutrum nunc at, finibus mi.
+      </p>
+      <ul>
+        <li><div class="loader loader-inline"></div><span class="red">ZA</span> RTV brez vmešavanja politike.</li>
+        <li><div class="loader loader-inline"></div><span class="red">ZA</span> RTV brez vmešavanja politike.</li>
+        <li><div class="loader loader-inline"></div><span class="red">ZA</span> RTV brez vmešavanja politike.</li>
+        <li><div class="loader loader-inline"></div><span class="red">ZA</span> RTV brez vmešavanja politike.</li>
+      </ul>
+      <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis facilisis justo at vehicula. Nulla
+        fringilla, erat id molestie <strong>asdf asdf dseik</strong> congue, eros nisi condimentum lectus, vehicula
+        viverra est lacus in diam. Nulla
+        facilisi. Nunc tempor augue ante, vel hendrerit lacus porttitor ut. Ut laoreet tortor hendrerit diam commodo
+        feugiat. Aenean vel purus placerat, rutrum nunc at, finibus mi.
+      </p>
+      <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis facilisis justo at vehicula. Nulla
+        fringilla, erat id molestie <strong>asdf asdf dseik</strong> congue, eros nisi condimentum lectus, vehicula
+        viverra est lacus in diam. Nulla
+        facilisi. Nunc tempor augue ante, vel hendrerit lacus porttitor ut. Ut laoreet tortor hendrerit diam commodo
+        feugiat. Aenean vel purus placerat, rutrum nunc at, finibus mi.
+      </p>
     </div>
   </div>
-  <div class="container">
-    <div class="petition">
-      <div class="row">
-        <!-- <div class="col-md-10 col-md-offset-1">
-          <div class="title-container">
-            <h2 class="landing__subtitle">
-              <p>
-                Programski svet in vodstvo RTV Slovenija – nastavljenci stranke, ki je pobudnica referenduma, ODSTOPITE!
-              </p>
-            </h2>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-12">
-          <hr class="divider">
-        </div> -->
-        <div class="col-md-10 col-md-offset-1">
-          <!-- <h3 class="petition__title">
-            <ol>
-              <li>Investitorjem omogoča, da gradijo brez pravnomočnega gradbenega dovoljenja.</li>
-              <li>Pristojne javne zavode podreja in postavlja v službo zasebnih investitorjev.</li>
-              <li>Odpira vrata za zlorabe, saj iz postopkov meče vse, ki lahko nanje opozorijo, s čimer tudi:</li>
-              <li>Ukinja nadzor sodišč nad odločitvami ministrstva za okolje.</li>
-            </ol>
-          </h3> -->
-          <button style="margin: auto; margin-top: 50px; max-width: 320px;" type="submit"
-            class="btn btn-default btn-block" id="btn-scroll">Podpiši <span class="hidden-xs">peticijo</span></button>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="petition">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="img/Pomladna_Sava_Balkan_River_Defence.jpg" class="img-responsive img-tweet">
-        </div>
-        <div class="col-md-6">
-          <img src="img/Pomladna_Sava_Balkan_River_Defence.jpg" class="img-responsive img-tweet">
-        </div>
-      </div>
-    </div> -->
-    <div class="petition">
-      <div class="row">
-        <div class="col-md-12">
-          <hr class="divider">
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="title-container">
-            <h2 class="landing__subtitle">
-              <p>
-                Podpisnice in podpisniki peticije zahtevamo odstop
-                generalnega direktorja RTV Slovenija Andreja Graha Whatmougha,
-                direktorja Televizije Slovenija Uroša Urbanije,
-                odgovorne urednice informativnega programa TV Slovenija Jadranke Rebernik,
-                v. d. urednika uredništva novih medijev na spletnem portalu MMC Igorja Pirkoviča,
-                ter vseh ostalih, ki so bili politično nastavljeni na vodstvene funkcije ali pa so jih politično
-                nastavljeni vodstveni delavci zaposlili na RTV brez ustreznih strokovnih znanj in izkušenj.
-              </p>
-            </h2>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <hr class="divider">
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="title-container">
-            <h3 class="petition__title">
-              <p>
-                Razgradnja javnega medija RTV Slovenija prehaja v sklepno fazo. Priča smo vsakodnevnemu organiziranemu
-                in sistematičnemu uničevanju javne RTV, ki je najhujša v celotni zgodovini naše države. Namesto
-                spoštovanja z zakonom določenega poslanstva javnega medija, da deluje v javnem interesu, se RTV
-                Slovenija spreminja v strankarsko glasilo stranke SDS. Namesto spoštovanja profesionalnih novinarskih in
-                produkcijskih standardov se neodvisen medij zlorablja za politično propagando ene stranke. 
-              </p>
-              <p>
-                V času pred referendumom, na katerem bomo odločali tudi o noveli Zakona o RTV, nujno potrebujemo
-                neodvisno in profesionalno delujočo RTV. Zaradi trenutnega vodstva RTV, zlasti televizije in spletnega
-                portala, ki je politično nastavljeno in povezano s stranko SDS, ta pa je hkrati pobudnica referenduma,
-                ne bo zagotovljenega nepristranskega in kakovostnega informiranja o razlogih za referendum kot tudi ne o
-                vsebini predloga novega zakona. Novi zakon, o katerem bodo na referendumu glasovali volivke in volivci,
-                uvaja spremembe v načinu imenovanja in sestavi upravnih organov in vodstva RTV Slovenija, ki
-                izključujejo vpliv strank in parlamenta. Če bo zakon potrjen na referendumu, bo sedanjim organom in
-                vodstvu pod vplivom stranke SDS prenehal mandat, zato je vodstvo neposredno zainteresirano, da do
-                sprememb ne pride in da zakon o RTV na referendumu ne dobi podpore volivk in volivcev. <strong>Zato je
-                  nujen pogoj za nepristransko poročanje RTV Slovenija v času pred referendumom odstop generalnega
-                  direktorja, direktorja televizije, odgovorne urednice TV Sovenija in v.d. urednika spletnega portala
-                  RTV Slovenija, ter vseh ostalih, ki so ravno tako pod vplivom stranke SDS politično nastavljeni na
-                  vodstvene funkcije ali zaposleni na uredniške, voditeljske in novinarske pozicije brez ustreznih
-                  strokovnih referenc, znanj in izkušenj.</strong>
-              </p>
-              <p>
-                Podpisnice in podpisniki peticije ostro <strong>obsojamo</strong> vse poteze vodilnih na RTV Slovenija,
-                s katerimi se načrtno ruši ugled javnega medija in uničuje medijsko javno dobro.
-                <strong>Obsojamo</strong> ukinjanje kakovostnih oddaj zaradi političnih razlogov, ustrahovanje kritičnih
-                novinarjev, novinark in drugih medijskih delavcev in delavk. <strong>Obsojamo</strong> zaposlovanje
-                nestrokovnih, pristranskih in zato za javni medij neprimernih urednic, voditeljev in voditeljic ter
-                uvajanje programskih vsebin, ki krnijo profesionalne standarde novinarskega dela.
-                <strong>Obsojamo</strong> vse oblike zastraševanja in discipliniranja stavkajočih ter njihovo
-                diskreditacijo. <strong>Obsojamo</strong> vse posege v novinarsko avtonomijo in poskuse spreminjanja
-                javnega medija v propagandno trobilo. 
-              </p>
-              <p>
-                <strong>Obsojamo</strong> delovanje članic in članov Programskega sveta RTV Slovenija, ki delujejo
-                politično pristransko in usklajeno, nezakonito in neetično. <strong>Obsojamo</strong> njihovo lojalnost
-                stranki SDS, namesto da bi bili lojalni javnosti. Njihovo delovanje je v nasprotju z Zakonom o RTV
-                Slovenija, ki določa, da morajo svoje delo opravljati neodvisno ter nepristransko, da so dolžni
-                uresničevati samo interese RTV Slovenija ter pri opravljanju svoje funkcije upoštevati Ustavo Republike
-                Slovenije in določila zakona.
-              </p>
-              <p>
-                <strong>Obsojamo</strong> delovanje članov Nadzornega sveta RTV Slovenija, ki dovoljuje in spodbuja
-                negospodarno delovanje vodilnih na RTV Slovenija, s čimer se javnemu mediju povzroča nepopravljiva
-                materialna škoda. 
-              </p>
-              <p>
-                Podpisnice in podpisniki peticije izražamo podporo vsem pokončnim in pogumnim novinarjem in novinarkam,
-                medijskim delavkam in delavcem RTV Slovenija, ki v težkih razmerah brutalne politične zlorabe in
-                pritiskov vztrajno varujejo zadnje ostanke javnega medija. V tem boju ne morejo in ne smejo ostati
-                sami.  
-              </p>
-              <p>
-                <strong>Podpisnice in podpisniki peticije zahtevamo, da se nemudoma zaustavi strankarski prevzem javnega
-                  medija ter zagotovi poštena referendumska kampanja.</strong>
-              </p>
-              <p>
-                <strong>Vse prebivalke in prebivalce pa pozivamo, da se referenduma množično udeležimo ter zagotovimo
-                  plebiscitarno odločitev, s katero bomo preprečili dokončno uničenje javne RTV.</strong>
-              </p>
-              <p>
-                <strong>S svojim podpisom dajete podporo javni RTV Slovenija. Stopimo skupaj v bran javnega medija, ne
-                  dovolimo,
-                  da si ga lasti in podreja katera koli stranka!</strong>
-              </p>
-            </h3>
-          </div>
-        </div>
-        <!-- <div class="col-md-12">
-          <hr class="divider">
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="title-container">
-            <h2 class="landing__subtitle">
-              <p>
-                Zato vas pozivamo: zavrnite sporna določila tretjega proti-koronskega paketa.
-              </p>
-            </h2>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <hr class="divider">
-        </div> -->
-      </div>
-    </div>
-    <div class="petition">
-      <div class="row">
-        <div class="col-lg-8 col-md-7">
-          <div class="title-container">
-            <h1 class="landing__title text-red">
-              Podpiši peticijo! Podporo lahko oddate tako v lastnem imenu, v imenu vaše organizacije, ali oboje.
-            </h1>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-5">
-          <form action="javascript:;" class="petition__form">
-            <input id="petition-name" class="form-control" placeholder="Ime (in priimek / organizacije)">
-            <input id="petition-email" class="form-control" placeholder="E-pošta" type="email">
-            <div class="checkbox">
-              <input id="petition-consent" type="checkbox">
-              <label for="petition-consent">
-                <span>Dovolim, da me v času pred referendumom obvestite o pomembnejših akcijah v podporo RTV.</span>
-              </label>
-            </div>
-            <div class="petition__consent">
-              S podpisom se strinjaš, da tvoje ime objavimo na tem spletnem mestu. Tvojega e-naslova ne bomo izdali
-              nikomur. Več o varstvu tvojih osebnih podatkov <a href="podatki.html" target="_blank">tukaj</a>.
-            </div>
-            <div class="js-petition-error"></div>
-            <button type="submit" class="btn btn-default btn-block">Podpišem!</button>
-          </form>
-          <div class="petition__reset">
-            <div class="petition__thanks lead">Hvala, ker ti je mar! &lt;3</div>
-            <div class="social-box clearfix text-center">
-              <span class="">POVEJ NAPREJ!</span>
-              <div class="buttons">
-                <button class="btn btn-social js-twitter">
-                  <svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
-                    </path>
-                  </svg>
-                </button>
-                <!-- <button class="btn btn-social js-facebook">
-                  <svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
-                    </path>
-                  </svg>
-                </button> -->
-                <button class="btn btn-social js-email">
-                  <svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z">
-                    </path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <button class="btn btn-link text-blue">Osveži formo</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="progress-container">
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                style="width: 0;">
-                <span class="sr-only">0%</span>
-              </div>
-            </div>
-            <div class="progress__note">
-              Zbranih <strong><span class="js-signaturecount"></span> / <span
-                  class="js-signaturemax">10000</span></strong> podpisov.
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-md-4 col-md-push-8">
-          <h2 class="signatures__title">Organizacije</h2>
-          <div class="signatures">
-            <p class="signature-names">
-            </p>
-          </div>
-        </div> -->
-        <div class="col-md-12">
-          <h2 class="signatures__title">Organizacije</h2>
-          <div class="signatures">
-            <p class="signature-names">
-              Glas ljudstva, Zavod PROJA, Društvo informacijski center Legebitra, Protestna ljudska skupščina,
-              Umanotera, Sinteza-KCD, Kulturno-umetniško društvo Police Dubove, Zveza Modro-bela ptica, Literarno
-              društvo IA, Združenje ROVO, Mirovni inštitut, IŠSP - Inštitut za študije stanovanj in prostora, Zadruga
-              Zadrugator, Zavod Avanta Largo, OPRO, zavod za aplikativne študije, Protestival, Zavod Državljan D,
-              Srebrna nit - Združenje za dostojno starost, Društvo Humanitas - Center za globalno učenje in sodelovanje,
-              Forum za enakopraven razvoj, Slovenska filantropija, OPRO, zavod za aplikativne študije, Ekologi brez
-              meja, PIC - Pravni center za varstvo človekovih pravic in okolja, Sindikat Mladi plus, Zavod Voluntariat,
-              Danes je nov dan, Inštitut za druga vprašanja, Zavod Tri, Zavod za kulturo raznolikosti Open, Iniciativa
-              mestni zbor Maribor, Uredništvo spol.si, Ženski lobi Slovenije, Asociacija, društvo nevladnih organizacij
-              in posameznikov v kulturi, Mesto žensk, Sindikat Glosa.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <h2 class="signatures__title">Podpisnice in podpisniki</h2>
-          <div class="signatures">
-            <p class="signature-names js-signaturenames show-less">
-            </p>
-            <button class="btn btn-default btn-showall center-block js-more">Pokaži vseh <span
-                class="js-signaturecount"></span> podpisov!</button>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <hr class="divider">
-        </div>
-        <div class="col-md-12">
-          <div class="petition__title--box">
-            <div class="footer__social">
-              <span class="social__title">POVEJ NAPREJ!</span>
-              <button class="btn btn-social js-twitter">
-                <svg width="35" height="35" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
-                  </path>
-                </svg>
-              </button>
-              <!-- <button class="btn btn-social js-facebook">
-                <svg width="35" height="35" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
-                  </path>
-                </svg>
-              </button> -->
-              <button class="btn btn-social js-email">
-                <svg width="35" height="35" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z">
-                  </path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
+  <div class="container-fluid footer">
     <div class="row">
       <div class="col-md-12">
-        <p style="text-align: center;">Spletno mesto z 💖 postavil <a href="https://danesjenovdan.si"
-            target="_blank">Danes je nov dan</a>.</p>
+        <p style="text-align: center;">Jaz sem footer.</p>
+        <!-- <p style="text-align: center;">Spletno mesto z 💖 postavil <a href="https://danesjenovdan.si"
+            target="_blank">Danes je nov dan</a>.</p> -->
       </div>
     </div>
   </div>
   </div>
+
+  <div class="scrolling-banner">
+    <div class="d-flex align-items-center">
+      <h2>&nbsp;<span class="red">ZA</span> TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM. <span
+          class="red">ZA</span> TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM. <span class="red">ZA</span>
+        TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM. <span class="red">ZA</span> TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM.</h2>
+    </div>
+    <div class="d-flex align-items-center">
+      <h2>&nbsp;<span class="red">ZA</span> TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM. <span
+          class="red">ZA</span> TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM. <span class="red">ZA</span>
+        TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM. <span class="red">ZA</span> TO GREM <span class="red">27. 11. 2022</span> NA REFERENDUM.</h2>
+    </div>
+  </div>
+
+  <style>
+    .scrolling-banner {
+      background-color: #1E4398;
+      overflow: hidden;
+      height: 5rem;
+
+      position: fixed;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+    }
+
+    .scrolling-banner>div {
+      color: #E4DDD7;
+      font-size: 2rem;
+      line-height: 3rem;
+      text-transform: uppercase;
+      position: absolute;
+      min-width: 100%;
+      height: 100%;
+      white-space: nowrap;
+      /* Apply animation to this element */
+      -moz-animation: loop 20s linear infinite;
+      -webkit-animation: loop 20s linear infinite;
+      animation: loop 20s linear infinite;
+    }
+
+
+    .scrolling-banner>div:last-child {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      animation-delay: -10s;
+    }
+
+    .scrolling-banner>div h2 {
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+
+    /* Move it (define the animation) */
+    @-moz-keyframes loop {
+      0% {
+        -moz-transform: translateX(100%);
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+      }
+    }
+
+    @-webkit-keyframes loop {
+      0% {
+        -webkit-transform: translateX(100%);
+      }
+
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
+    }
+
+    @keyframes loop {
+      0% {
+        -moz-transform: translateX(100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateX(100%);
+        /* Firefox bug fix */
+        transform: translateX(100%);
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+        /* Firefox bug fix */
+        -webkit-transform: translateX(-100%);
+        /* Firefox bug fix */
+        transform: translateX(-100%);
+      }
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

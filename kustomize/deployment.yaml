@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rtv
+  name: rtvjezakon
   labels:
-    app: rtv
+    app: rtvjezakon
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rtv
+      app: rtvjezakon
   template:
     metadata:
       labels:
-        app: rtv
+        app: rtvjezakon
     spec:
       containers:
-      - name: rtv
-        image: rtv
+      - name: rtvjezakon
+        image: rtvjezakon
         ports:
         - containerPort: 80

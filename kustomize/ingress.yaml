@@ -1,34 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: rtv
+  name: rtvjezakon
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - rtv.lb.djnd.si
-        - rtv.glas-ljudstva.si
-      secretName: rtv-tls
+        - rtvjezakon.lb.djnd.si
+      secretName: rtvjezakon-tls
   rules:
-    - host: rtv.lb.djnd.si
+    - host: rtvjezakon.lb.djnd.si
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: rtv
-                port:
-                  number: 80
-    - host: rtv.glas-ljudstva.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: rtv
+                name: rtvjezakon
                 port:
                   number: 80
