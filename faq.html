@@ -104,6 +104,17 @@ peticijo za takojšnji odstop politično nastavljenega vodstva RTV Slovenija!">
             color: #1E4398;
         }
 
+        @media (max-width: 520px) {
+            .menu {
+                font-size: 18px;
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                /* background-color: #D9D9D9; */
+            }
+        }
+
         .menu span,
         .menu a {
             margin-left: 10px;
@@ -187,6 +198,10 @@ peticijo za takojšnji odstop politično nastavljenega vodstva RTV Slovenija!">
         .footer {
             background-color: #FF866F;
             padding-top: 11px;
+        }
+
+        .footer p {
+            color: #1E4398;
         }
 
         .footer a {
@@ -349,12 +364,96 @@ peticijo za takojšnji odstop politično nastavljenega vodstva RTV Slovenija!">
             text-decoration: underline;
         }
     </style>
+    <style>
+        .fg-first {
+          opacity: 1;
+          background-image: url('img/Frame\ 10.svg');
+          -webkit-animation: firstHeaderAnimation 9s linear infinite;
+          -moz-animation: firstHeaderAnimation 9s linear infinite;
+          -o-animation: firstHeaderAnimation 9s linear infinite;
+            animation: firstHeaderAnimation 9s linear infinite;
+        }
+        .fg-second {
+          opacity: 0;
+          background-image: url('img/Frame\ 11.svg');
+          -webkit-animation: firstHeaderAnimation 9s linear 3s infinite;
+          -moz-animation: firstHeaderAnimation 9s linear 3s infinite;
+          -o-animation: firstHeaderAnimation 9s linear 3s infinite;
+            animation: firstHeaderAnimation 9s linear 3s infinite;
+        }
+        .fg-third {
+          opacity: 0;
+          background-image: url('img/Frame\ 12.svg');
+          -webkit-animation: firstHeaderAnimation 9s linear 6s infinite;
+          -moz-animation: firstHeaderAnimation 9s linear 6s infinite;
+          -o-animation: firstHeaderAnimation 9s linear 6s infinite;
+            animation: firstHeaderAnimation 9s linear 6s infinite;
+        }
+    
+        @keyframes firstHeaderAnimation {
+          0%   { opacity:1; }
+          33.32% { opacity: 1}
+          33.33%  { opacity:0 }
+          66.65% { opacity: 0}
+          66.66% { opacity: 0}
+          100% { opacity:0; }
+        }
+        @-o-keyframes firstHeaderAnimation {
+          0%   { opacity:1; }
+          33.32% { opacity: 1}
+          33.33%  { opacity:0 }
+          66.65% { opacity: 0}
+          66.66% { opacity: 0}
+          100% { opacity:0; }
+        }
+        @-moz-keyframes firstHeaderAnimation {
+          0%   { opacity:1; }
+          33.32% { opacity: 1}
+          33.33%  { opacity:0 }
+          66.65% { opacity: 0}
+          66.66% { opacity: 0}
+          100% { opacity:0; }
+        }
+        @-webkit-keyframes firstHeaderAnimation {
+          0%   { opacity:1; }
+          33.32% { opacity: 1}
+          33.33%  { opacity:0 }
+          66.65% { opacity: 0}
+          66.66% { opacity: 0}
+          100% { opacity:0; }
+        }
+        /* @keyframes headerAnimation {
+          0%   { opacity:0; }
+          33.32% { opacity: 0}
+          33.33%  { opacity:1 }
+          66.65% { opacity: 1}
+          66.66% { opacity: 0}
+          100% { opacity:0; }
+        }
+        @-o-keyframes headerAnimation{
+          0%   { opacity:1; }
+          50%  { opacity:0; }
+          100% { opacity:1; }
+        }
+        @-moz-keyframes headerAnimation{
+          0%   { opacity:1; }
+          50%  { opacity:0; }
+          100% { opacity:1; }
+        }
+        @-webkit-keyframes headerAnimation{
+          0%   { opacity:1; }
+          50%  { opacity:0; }
+          100% { opacity:1; }
+        } */
+      </style>
     <script defer data-domain="rtv.glas-ljudstva.si" src="https://plausible.lb.djnd.si/js/plausible.js"></script>
 </head>
 
 <body>
     <div class="loader"></div>
-    <div class="foreground"></div>
+    <div class="foreground fg-first"></div>
+  <div class="foreground fg-second"></div>
+  <div class="foreground fg-third"></div>
     <div class="container-fluid">
         <div class="menu">
             <a href="/faq.html" style="text-decoration: underline;">Pogosta vprašanja</a>
