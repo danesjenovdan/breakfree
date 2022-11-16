@@ -8,4 +8,4 @@ resources:
 images:
   - name: rtvjezakon
     newName: rg.fr-par.scw.cloud/djnd/rtvjezakon
-    newTag: 'e8c452f0159482eae24a5f95c0ea234e35fd4c42'
+    newTag: '6d5c8ffc69da96c17c414837bc6a74e54e7fbe16'
