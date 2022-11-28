@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: stanovanjske-zadruge
-        image: rg.fr-par.scw.cloud/djnd/stanovanjske-zadruge:latest
+        image: stanovanjske-zadruge
         ports:
         - containerPort: 80
