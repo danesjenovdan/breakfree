@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: naravenedamo
-        image: rg.fr-par.scw.cloud/djnd/naravenedamo:latest
+        image: naravenedamo
         ports:
         - containerPort: 80
