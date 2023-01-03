@@ -9,8 +9,7 @@ spec:
   tls:
     - hosts:
         - stanovanjske-zadruge.lb.djnd.si
-        - zastanovanjskezadruge.si
-        - www.zastanovanjskezadruge.si
+        - peticija.zastanovanjskezadruge.si
       secretName: stanovanjske-zadruge-tls
   rules:
     - host: stanovanjske-zadruge.lb.djnd.si
@@ -23,17 +22,7 @@ spec:
                 name: stanovanjske-zadruge
                 port:
                   number: 80
-    - host: zastanovanjskezadruge.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: stanovanjske-zadruge
-                port:
-                  number: 80
-    - host: www.zastanovanjskezadruge.si
+    - host: peticija.zastanovanjskezadruge.si
       http:
         paths:
           - path: /
