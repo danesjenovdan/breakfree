@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imasjajca-deployment
+  labels:
+    app: imasjajca
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imasjajca
+  template:
+    metadata:
+      labels:
+        app: imasjajca
+    spec:
+      containers:
+      - name: imasjajca
+        image: imasjajca
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+          limits:
+            memory: 100Mi
+            cpu: 100m
