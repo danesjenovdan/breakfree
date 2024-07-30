@@ -10,7 +10,8 @@ spec:
   tls:
     - hosts:
         - imasjajca.lb.djnd.si
-        #- imasjajca.si
+        - imasjajca.si
+        - www.imasjajca.si
       secretName: imasjajca-tls
   rules:
     - host: imasjajca.lb.djnd.si
@@ -23,13 +24,23 @@ spec:
                 name: imasjajca
                 port:
                   number: 80
-    # - host: imasjajca.si
-    #   http:
-    #     paths:
-    #       - path: /
-    #         pathType: Prefix
-    #         backend:
-    #           service:
-    #             name: imasjajca
-    #             port:
-    #               number: 80
+    - host: imasjajca.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: imasjajca
+                port:
+                  number: 80
+    - host: www.imasjajca.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: imasjajca
+                port:
+                  number: 80
