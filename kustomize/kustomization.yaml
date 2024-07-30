@@ -9,4 +9,4 @@ resources:
 images:
   - name: imasjajca
     newName: rg.fr-par.scw.cloud/djnd/imasjajca
-    newTag: 'd5ff93ec68d28a1ce076d4312ba0530d90e3f7f4'
+    newTag: '78000ead79baa066998190f293a1ad28eb9e3ebb'
