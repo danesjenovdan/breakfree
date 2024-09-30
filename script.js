@@ -16,7 +16,8 @@ $(function ready() {
     //   $('body').addClass('modal-open');
 
       $('.chatbox').show();
-      $('.chatbox .frame-container').html('<iframe src="http://muki.webfactional.com/djstatic/breakfree/" border="0"></iframe>');
+      // $('.chatbox .frame-container').html('<iframe src="http://muki.webfactional.com/djstatic/breakfree/" border="0"></iframe>');
+      $('.chatbox .frame-container').html('offline');
     // }, 150);
   });
 
@@ -70,16 +71,17 @@ $(function ready() {
       petition_djnd: $('#petition-djnd').val(),
     };
     console.log(data);
-    $.get('http://djnd-test.lepko.net/podpisek/', data, function (res) {
-      if (res == 'success') {
-        $('.js-petition-error').text('');
-        $('.petition__form').hide();
-        $('.petition__reset').show();
-      } else {
+    // $.get('http://djnd-test.lepko.net/podpisek/', data, function (res) {
+    //   if (res == 'success') {
+    //     $('.js-petition-error').text('');
+    //     $('.petition__form').hide();
+    //     $('.petition__reset').show();
+    //   } else {
+        const res = 'offline';
         console.log('error', res);
         $('.js-petition-error').text('Napaka: ' + res);
-      }
-    });
+    //   }
+    // });
   });
 
   $('.petition__reset .btn-link').on('click', function () {
