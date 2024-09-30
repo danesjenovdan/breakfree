@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: breakfree
+  labels:
+    app: breakfree
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: breakfree
+  template:
+    metadata:
+      labels:
+        app: breakfree
+    spec:
+      containers:
+        - name: breakfree
+          image: breakfree
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 50Mi
+              cpu: 50m
+            limits:
+              memory: 50Mi
+              cpu: 50m
