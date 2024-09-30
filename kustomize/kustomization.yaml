@@ -8,4 +8,4 @@ resources:
 images:
   - name: breakfree
     newName: rg.fr-par.scw.cloud/djnd/breakfree
-    newTag: "latest"
+    newTag: 'a31035613a1a27428e31abc89b83c953128189d8'
