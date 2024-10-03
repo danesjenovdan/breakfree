@@ -8,4 +8,4 @@ resources:
 images:
   - name: dajmir
     newName: rg.fr-par.scw.cloud/djnd/dajmir
-    newTag: "latest"
+    newTag: 'd1af2d201261977618108873c4c9f2a60c0ac642'
