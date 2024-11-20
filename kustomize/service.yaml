@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: resimointernet
+spec:
+  selector:
+    app: resimointernet
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

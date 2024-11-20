@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: resimointernet
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - resimointernet.djnd.si
+        - resimointernet.danesjenovdan.si
+      secretName: resimointernet-tls
+  rules:
+    - host: resimointernet.djnd.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: resimointernet
+                port:
+                  number: 80
+    - host: resimointernet.danesjenovdan.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: resimointernet
+                port:
+                  number: 80

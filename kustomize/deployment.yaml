@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resimointernet
+  labels:
+    app: resimointernet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resimointernet
+  template:
+    metadata:
+      labels:
+        app: resimointernet
+    spec:
+      containers:
+        - name: resimointernet
+          image: resimointernet
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 50Mi
+              cpu: 50m
+            limits:
+              memory: 50Mi
+              cpu: 50m
