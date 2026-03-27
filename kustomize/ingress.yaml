@@ -1,4 +1,3 @@
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -6,26 +5,15 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
-        - imasjajca.lb.djnd.si
         - imasjajca.si
         - www.imasjajca.si
       secretName: imasjajca-tls
   rules:
-    - host: imasjajca.lb.djnd.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: imasjajca
-                port:
-                  number: 80
     - host: imasjajca.si
-      http:
+      http: &http_paths
         paths:
           - path: /
             pathType: Prefix
@@ -35,12 +23,4 @@ spec:
                 port:
                   number: 80
     - host: www.imasjajca.si
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: imasjajca
-                port:
-                  number: 80
+      http: *http_paths
