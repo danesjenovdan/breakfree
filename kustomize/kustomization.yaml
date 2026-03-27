@@ -8,4 +8,4 @@ resources:
 images:
   - name: resimointernet
     newName: rg.fr-par.scw.cloud/djnd/resimointernet
-    newTag: '6668d11b90dd2245aaaf58dfeba5b3e3786fa949'
+    newTag: '47a9de682c9fe816765be943d8b30bd7cfd37c8b'
