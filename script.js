@@ -50,7 +50,7 @@ $(function ready() {
   $('.js-more').on('click', showAllSignatures);
 
   var maxSignatures = parseInt($('.js-signaturemax').text(), 10);
-  // $.get('http://djnd-test.lepko.net/podpisek/?k=breakfree&count', function (res) {
+  // $.get('http://example.com/podpisek/?k=breakfree&count', function (res) {
     // var count = parseInt(res, 10);
     var count = 5255;
     if (!isNaN(count)) {
@@ -71,7 +71,7 @@ $(function ready() {
       petition_djnd: $('#petition-djnd').val(),
     };
     console.log(data);
-    // $.get('http://djnd-test.lepko.net/podpisek/', data, function (res) {
+    // $.get('http://example.com/podpisek/', data, function (res) {
     //   if (res == 'success') {
     //     $('.js-petition-error').text('');
     //     $('.petition__form').hide();
