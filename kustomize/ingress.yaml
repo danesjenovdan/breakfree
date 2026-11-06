@@ -4,15 +4,16 @@ metadata:
   name: imasjajca
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
+    traefik.ingress.kubernetes.io/router.middlewares: |
+      traefik-redirect-to-https@kubernetescrd
 spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - imasjajca.si
-        - www.imasjajca.si
+        - imasjajca.lb2.djnd.si
       secretName: imasjajca-tls
   rules:
-    - host: imasjajca.si
+    - host: imasjajca.lb2.djnd.si
       http: &http_paths
         paths:
           - path: /
@@ -22,5 +23,3 @@ spec:
                 name: imasjajca
                 port:
                   number: 80
-    - host: www.imasjajca.si
-      http: *http_paths
